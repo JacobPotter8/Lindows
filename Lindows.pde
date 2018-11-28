@@ -31,6 +31,11 @@ void draw() {
   text(username, 475, 350);
   text(password, 475, 400);
   //text(""+Usernametype, 200, 200);
+  if(login == true){
+  clear();
+    fill(0);
+  app1(25, 25);
+  }
 }
 
 void keyPressed() {
