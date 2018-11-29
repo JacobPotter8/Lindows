@@ -7,7 +7,6 @@ boolean login;
 String username;
 String acntusername;
 Boolean Usernametype;
-
 void setup(){
   
   size(1250, 700);
@@ -22,20 +21,16 @@ Usernametype = true;
 }
 
 void draw(){
-  image(lgin1, 0, 0);
+image(lgin1, 0, 0);
 image(profpic, 500, 50, 125, 125);
 fill(0);
 textSize(40);
 text("Account", 475, 250);
 text(username, 475, 350);
-
 text(password, 475, 400);
-  if(login ==true){
-    clear();
-    fill(150,250,60);
-      app1(25,25);
+
 }
-}
+
 void keyPressed() {
  if(Usernametype = true){
   if (keyCode == BACKSPACE) {
