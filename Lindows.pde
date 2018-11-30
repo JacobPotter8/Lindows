@@ -8,11 +8,15 @@ String username;
 String acntusername = "h";
 Boolean Usernametype;
 int Passwordtype = 0;
+//Desktop variables
+PImage desk1;
+
+
 void setup() {
 
   size(1250, 700);
   profpic = loadImage("profpic.png");
-  lgin1 = loadImage("lgin1.jpg");
+  lgin1 = loadImage("lockscreen1.jpg");
   lgin2 = loadImage("lgin2.png");
   rectMode(CENTER);
   ellipseMode(CENTER);
@@ -34,13 +38,16 @@ void draw() {
   //text(""+Usernametype, 200, 200);
   //text(""+login, 100, 200);
   //text(""+Passwordtype, 100, 100);
- if(Passwordtype == 2){
+  if (Passwordtype == 2) {
     login = true;
   }
-  if(login == true){
-  clear();
+  if (login == true) {
+    clear();
     fill(0);
-  app1(25, 25);
+    app1(25, 25);
+ 
+    desk1 = loadImage("desktop1.jpg");
+    image(desk1,0,0,width,height );
   }
 }
 
@@ -70,16 +77,13 @@ void keyPressed() {
       passwordCheck(password, acntpassword);
     } else if (keyCode != SHIFT && keyCode != CONTROL && keyCode != ALT && keyCode != TAB) {
       password = password + key;
-     
-      
-      
     }
   }
 }
 void passwordCheck(String password, String acntpassword) {
 
   if (password.equals(acntpassword)) {
-    
+
     Passwordtype = 2;
   } else {
     Passwordtype = 1;
@@ -89,6 +93,5 @@ void usernameCheck(String username, String acntusername) {
   if (username.equals(acntusername)) {
     Usernametype = false;
     Passwordtype = 1;
-   
   }
 }

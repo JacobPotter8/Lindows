@@ -1,6 +1,8 @@
-void app1(int appX, int appY){
-  appX = 25;
-  appY = 25;
-  fill(255);
-  rect(appX, appY, 100, 100);
+void app1(int iconX, int iconY){
+PImage discord;
+
+  
+  discord = loadImage("accord.png");
+  image(discord,50,50,75,75);
+
 }
