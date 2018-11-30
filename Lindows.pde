@@ -7,6 +7,7 @@ boolean login;
 String username;
 String acntusername = "h";
 Boolean Usernametype;
+int Passwordtype = 0;
 void setup() {
 
   size(1250, 700);
@@ -31,6 +32,11 @@ void draw() {
   text(username, 475, 350);
   text(password, 475, 400);
   //text(""+Usernametype, 200, 200);
+  //text(""+login, 100, 200);
+  //text(""+Passwordtype, 100, 100);
+ if(Passwordtype == 2){
+    login = true;
+  }
   if(login == true){
   clear();
     fill(0);
@@ -64,19 +70,25 @@ void keyPressed() {
       passwordCheck(password, acntpassword);
     } else if (keyCode != SHIFT && keyCode != CONTROL && keyCode != ALT && keyCode != TAB) {
       password = password + key;
+     
+      
+      
     }
   }
 }
 void passwordCheck(String password, String acntpassword) {
 
   if (password.equals(acntpassword)) {
-    login = true;
+    
+    Passwordtype = 2;
   } else {
-    login = false;
+    Passwordtype = 1;
   }
 }
 void usernameCheck(String username, String acntusername) {
   if (username.equals(acntusername)) {
     Usernametype = false;
+    Passwordtype = 1;
+   
   }
 }
