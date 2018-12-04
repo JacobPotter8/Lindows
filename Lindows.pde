@@ -10,9 +10,8 @@ Boolean Usernametype;
 int Passwordtype = 0;
 //Desktop variables
 PImage desk1;
-boolean startdiscord = false;
-boolean startup = true;
-boolean closediscord;
+
+
 void setup() {
 
   size(1250, 700);
@@ -29,7 +28,7 @@ void setup() {
 void draw() {
   image(lgin1, 0, 0);
   image(profpic, 500, 50, 125, 125);
-  fill(255, 0, 0);
+  fill(0);
   textSize(40);
   text("Account", 475, 250);
   text("Username:", 250, 350);
@@ -39,41 +38,18 @@ void draw() {
   //text(""+Usernametype, 200, 200);
   //text(""+login, 100, 200);
   //text(""+Passwordtype, 100, 100);
-
-
-  if (startdiscord == true) {
-    text("nigga", 50, 50);
-  }
-
-
-
   if (Passwordtype == 2) {
     login = true;
   }
   if (login == true) {
     clear();
-   desktop();
-    
-    //desk1 = loadImage("desktop1.jpg");
-    //image(desk1, 0, 0, width, height ); 
-    //fill(0);
-    //button(#FFFFFF, 45,45,90,90,0,0,"start game discord");
-    //discord(25, 25);
-  }
-  if (startdiscord == true) {
-    PImage discordImg;
-    discordImg = loadImage("discordimage.png");
-    image(discordImg, 0, 0, width, height);
-    button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closediscord");
-  }
-
-  if (closediscord == true) {
-
- desktop();
-  
+    fill(0);
+    app1(25, 25);
+ 
+    desk1 = loadImage("desktop1.jpg");
+    image(desk1,0,0,width,height );
   }
 }
-
 
 void keyPressed() {
   if (Usernametype == true) {
