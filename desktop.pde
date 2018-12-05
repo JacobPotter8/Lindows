@@ -4,6 +4,7 @@ void desktop() {
   fill(0);
   button(#FFFFFF, 45, 45, 90, 90, 0, 0, "start game discord");
   discord(25, 25);
+clock();
 }
 
 
@@ -39,11 +40,17 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
 }
 
 
-void time(){
+void clock(){
 int frames = 0;
 int seconds = 0;
 int minutes = 0;
 int hours = 0;
+textSize(16);
+text(seconds,1200,675);
+text(minutes,1150,675);
+text(hours,1125,675);
+text(":",1190,675);
+text(":",1140,675);
   frames = frames+1;
  if(frames == 60){
    seconds = seconds+1;
