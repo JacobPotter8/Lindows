@@ -41,9 +41,7 @@ void draw() {
   //text(""+Passwordtype, 100, 100);
 
 
-  if (startdiscord == true) {
-    text("nigga", 50, 50);
-  }
+ 
 
 
 
@@ -65,6 +63,7 @@ void draw() {
     discordImg = loadImage("discordimage.png");
     image(discordImg, 0, 0, width, height);
     button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closediscord");
+    
   }
 
   if (closediscord == true) {
