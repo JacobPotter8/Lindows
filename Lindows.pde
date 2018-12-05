@@ -13,6 +13,8 @@ PImage desk1;
 boolean startdiscord = false;
 boolean startup = true;
 boolean closediscord;
+
+
 void setup() {
 
   size(1250, 700);
