@@ -3,16 +3,23 @@ void desktop() {
   image(desk1, 0, 0, width, height ); 
   fill(0);
   button(#FFFFFF, 45, 45, 90, 90, 0, 0, "start game discord");
-  discord(25, 25);
+  button(#FFFFFF, 45, 145, 90, 90, 0, 0, "start game twitter");
+  discord();
+twitter();
 clock();
 }
 
 
 
-void discord(int iconX, int iconY) {
+void discord() {
   PImage discord; 
   discord = loadImage("accord.png");
   image(discord, 50, 50, 75, 75);
+}
+void twitter() {
+  PImage twitter; 
+  twitter = loadImage("twitter.png");
+  image(twitter, 50, 150, 75, 75);
 }
 
 
@@ -32,6 +39,12 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
     }
     if (function.toLowerCase().equals("closediscord")) {
       closediscord=true;
+    }
+    if (function.toLowerCase().equals("start game twitter")) {
+      starttwitter=true;
+    }
+    if (function.toLowerCase().equals("clsoetwitter")) {
+      closetwitter=true;
     }
     fill(whenpressed);
   }

@@ -10,9 +10,11 @@ Boolean Usernametype;
 int Passwordtype = 0;
 //Desktop variables
 PImage desk1;
-boolean startdiscord = false;
+boolean startdiscord;
 boolean startup = true;
 boolean closediscord;
+boolean starttwitter;
+boolean closetwitter;
 
 
 void setup() {
