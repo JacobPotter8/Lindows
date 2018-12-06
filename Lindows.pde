@@ -13,7 +13,7 @@ PImage desk1;
 boolean startdiscord = false;
 boolean startup = true;
 boolean closediscord;
-
+int start;
 
 void setup() {
 
@@ -53,11 +53,7 @@ void draw() {
     clear();
    desktop();
     
-    desk1 = loadImage("desktop1.jpg");
-    image(desk1, 0, 0, width, height ); 
-    fill(0);
-    button(#FFFFFF, 45,45,90,90,0,0,"start game discord");
-    discord(25, 25);
+    
   }
   if (startdiscord == true) {
     PImage discordImg;

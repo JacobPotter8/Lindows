@@ -41,27 +41,23 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
 
 
 void clock(){
-int frames = 0;
-int seconds = 0;
-int minutes = 0;
-int hours = 0;
+  int seconds = 0;
+  seconds = millis()/1000;
+int minutes = 20;
+int hours = 4;
+if(seconds > 60){
+minutes = +1;
+}
+
+if(minutes > 60){
+hours = +1;
+}
+
 textSize(16);
 text(seconds,1200,675);
 text(minutes,1150,675);
 text(hours,1125,675);
 text(":",1190,675);
 text(":",1140,675);
-  frames = frames+1;
- if(frames == 60){
-   seconds = seconds+1;
-   frames = 0;
- }
- if(seconds==60){
-   minutes = minutes + 1;
-   seconds = 0;
- }
- if(minutes==60){
-   hours = hours+1;
-   minutes = 0;
- }
+
 }
