@@ -38,19 +38,11 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
   rectMode(CORNER);
   rect(cornerx, cornery, sizex, sizey);
 }
-
-
 void clock(){
+
 int seconds = 0;
 int minutes = 20;
 int hours = 4;
-textSize(16);
-text(seconds,1200,675);
-text(minutes,1150,675);
-text(hours,1125,675);
-text(":",1190,675);
-text(":",1140,675);
-
   seconds = millis()/1000;
 
 if(seconds > 60){
@@ -60,5 +52,13 @@ minutes = +1;
 if(minutes > 60){
 hours = +1;
 }
+
+textSize(16);
+text(seconds,1200,675);
+text(minutes,1150,675);
+text(hours,1125,675);
+text(":",1190,675);
+text(":",1140,675);
+
 
 }
