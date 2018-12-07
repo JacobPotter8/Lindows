@@ -15,6 +15,9 @@ boolean startup = true;
 boolean closediscord;
 boolean starttwitter;
 boolean closetwitter;
+boolean startedge;
+boolean closeedge;
+
 
 
 void setup() {
@@ -75,6 +78,10 @@ void draw() {
     button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closetwitter");
     starttwitter = false;
     
+  }
+  if(startedge == true){
+    launch("H:/Coding/Lindows/edge.url");
+    startedge = false;
   }
 }
 

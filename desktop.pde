@@ -5,8 +5,11 @@ void desktop() {
  rect( 1130, 670, 100, 45);
   button(#FFFFFF, 45, 45, 90, 90, 0, 0, "start game discord");
   button(#FFFFFF, 45, 145, 90, 90, 0, 0, "start game twitter");
+    button(#FFFFFF, 45, 245, 80, 80, 0, 0, "start game edge");
+
   discord();
 twitter();
+edge();
 clock();
 }
 
@@ -22,8 +25,11 @@ void twitter() {
   twitter = loadImage("twitter.png");
   image(twitter, 50, 150, 75, 75);
 }
-
-
+void edge() {
+  PImage edge; 
+  edge = loadImage("edge.png");
+  image(edge, 50, 250, 75, 75);
+}
 
 
 void button(color basecolour, float cornerx, float cornery, float sizex, float sizey, color whenhovered, color whenpressed, String function) {
@@ -47,6 +53,9 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
     if (function.toLowerCase().equals("clsoetwitter")) {
       closetwitter=true;
     }
+      if (function.toLowerCase().equals("closeedge")) {
+      closeedge=true;
+      }
     fill(whenpressed);
   }
   rectMode(CORNER);
