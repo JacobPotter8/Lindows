@@ -50,9 +50,12 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
     if (function.toLowerCase().equals("start game twitter")) {
       starttwitter=true;
     }
-    if (function.toLowerCase().equals("clsoetwitter")) {
+    if (function.toLowerCase().equals("closetwitter")) {
       closetwitter=true;
     }
+    if (function.toLowerCase().equals("start game edge")) {
+     startedge=true;
+      }
       if (function.toLowerCase().equals("closeedge")) {
       closeedge=true;
       }
