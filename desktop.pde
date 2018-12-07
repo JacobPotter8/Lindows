@@ -2,6 +2,7 @@ void desktop() {
   desk1 = loadImage("desktop1.jpg");
   image(desk1, 0, 0, width, height ); 
   fill(0);
+ rect( 1130, 670, 100, 45);
   button(#FFFFFF, 45, 45, 90, 90, 0, 0, "start game discord");
   button(#FFFFFF, 45, 145, 90, 90, 0, 0, "start game twitter");
   discord();
@@ -52,26 +53,14 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
   rect(cornerx, cornery, sizex, sizey);
 }
 void clock(){
-
-int seconds = 0;
-int minutes = 20;
-int hours = 4;
-  seconds = millis()/1000;
-
-if(seconds > 60){
-minutes = +1;
-}
-
-if(minutes > 60){
-hours = +1;
-}
+fill(255);
 
 textSize(16);
-text(seconds,1200,675);
-text(minutes,1150,675);
-text(hours,1125,675);
-text(":",1190,675);
-text(":",1140,675);
+text(second(),1200,685);
+text(minute(),1170,685);
+text(hour(),1140,685);
+text(":",1190,685);
+text(":",1165,685);
 
 
 }
