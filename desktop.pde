@@ -3,8 +3,8 @@ void desktop() {
   image(desk1, 0, 0, width, height ); 
   fill(0);
  rect( 1130, 670, 100, 45);
-  button(#FFFFFF, 45, 45, 90, 90, 0, 0, "start game discord");
-  button(#FFFFFF, 45, 145, 90, 90, 0, 0, "start game twitter");
+  button(#FFFFFF, 45, 45, 80, 80, 0, 0, "start game discord");
+  button(#FFFFFF, 45, 145, 80, 80, 0, 0, "start game twitter");
     button(#FFFFFF, 45, 245, 80, 80, 0, 0, "start game edge");
 
   discord();
