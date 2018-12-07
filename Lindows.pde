@@ -70,7 +70,14 @@ void draw() {
  desktop();
   
   }
+  if(starttwitter == true){
+    launch("H:/Coding/Lindows/birdie.url");
+    button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closetwitter");
+    starttwitter = false;
+    
+  }
 }
+
 
 
 void keyPressed() {
