@@ -81,6 +81,7 @@ void draw() {
   }
   if(startedge == true){
     launch("H:/Coding/Lindows/edge.url");
+    button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closeedge");
     startedge = false;
   }
 }
