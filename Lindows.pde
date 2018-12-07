@@ -2,7 +2,7 @@ PImage profpic;
 PImage lgin1;
 PImage lgin2;
 String password;
-String acntpassword = "qwerty";
+String acntpassword = "h";
 boolean login;
 String username;
 String acntusername = "h";
