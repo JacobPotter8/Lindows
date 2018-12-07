@@ -2,13 +2,11 @@ void desktop() {
   desk1 = loadImage("desktop1.jpg");
   image(desk1, 0, 0, width, height ); 
   fill(0);
-  button(#FFFFFF, 45, 45, 80, 80, 0, 0, "start game discord");
-  button(#FFFFFF, 45, 145, 80, 80, 0, 0, "start game twitter");
-  button(#FFFFFF, 45, 245, 80, 80, 0, 0, "start game edge");
-clock();
+  button(#FFFFFF, 45, 45, 90, 90, 0, 0, "start game discord");
+  button(#FFFFFF, 45, 145, 90, 90, 0, 0, "start game twitter");
   discord();
 twitter();
-edge();
+clock();
 }
 
 
@@ -22,11 +20,6 @@ void twitter() {
   PImage twitter; 
   twitter = loadImage("twitter.png");
   image(twitter, 50, 150, 75, 75);
-}
-void edge() {
-  PImage edge; 
-  edge = loadImage("edge.png");
-  image(edge, 50, 250, 75, 75);
 }
 
 
@@ -50,14 +43,8 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
     if (function.toLowerCase().equals("start game twitter")) {
       starttwitter=true;
     }
-    if (function.toLowerCase().equals("closetwitter")) {
+    if (function.toLowerCase().equals("clsoetwitter")) {
       closetwitter=true;
-    }
-    if (function.toLowerCase().equals("start game edge")) {
-      starttwitter=true;
-    }
-    if (function.toLowerCase().equals("closeedge")) {
-      closeedge=true;
     }
     fill(whenpressed);
   }
@@ -66,11 +53,23 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
 }
 void clock(){
 
+int seconds = 0;
+int minutes = 20;
+int hours = 4;
+  seconds = millis()/1000;
+
+if(seconds > 60){
+minutes = +1;
+}
+
+if(minutes > 60){
+hours = +1;
+}
 
 textSize(16);
-text(second(),1200,675);
-text(minute(),1150,675);
-text(hour(),1125,675);
+text(seconds,1200,675);
+text(minutes,1150,675);
+text(hours,1125,675);
 text(":",1190,675);
 text(":",1140,675);
 

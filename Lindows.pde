@@ -15,8 +15,7 @@ boolean startup = true;
 boolean closediscord;
 boolean starttwitter;
 boolean closetwitter;
-boolean startedge;
-boolean closeedge;
+
 
 void setup() {
 
