@@ -75,13 +75,13 @@ void draw() {
   
   }
   if(starttwitter == true){
-    launch("H:/Coding/Lindows/birdie.url");
+    launch("H:/birdie.url");
     button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closetwitter");
     starttwitter = false;
     
   }
   if(startedge == true){
-    launch("H:/Coding/Lindows/edge.url");
+    launch("H:/edge.url");
     button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closeedge");
     startedge = false;
   }
