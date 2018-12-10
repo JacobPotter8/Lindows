@@ -6,8 +6,9 @@ String acntpassword = "h";
 boolean login;
 String username;
 String acntusername = "h";
-Boolean Usernametype;
-int Passwordtype = 0;
+Boolean enterUsername;
+int enterPassword = 0;
+//enterPassword: 0 turns it off. 1 Indicates the password is off but it does not switch back to enterUsername. 2 Indicates the password was correct.
 //Desktop variables
 PImage desk1;
 boolean startdiscord;
@@ -30,7 +31,7 @@ void setup() {
   ellipseMode(CENTER);
   username = "";
   password = "";
-  Usernametype = true;
+   enterUsername = true;
 }
 
 void draw() {
@@ -51,7 +52,7 @@ void draw() {
 
 
 
-  if (Passwordtype == 2) {
+  if (enterPassword == 2) {
     login = true;
   }
   if (login == true) {
@@ -89,7 +90,7 @@ void draw() {
 
 
 void keyPressed() {
-  if (Usernametype == true) {
+  if ( enterUsername == true) {
     if (keyCode == BACKSPACE) {
       if (username.length() > 0) {
         username = username.substring(0, username.length()-1);
@@ -103,7 +104,7 @@ void keyPressed() {
     }
   }
 
-  if (Usernametype == false) {
+  if ( enterUsername == false) {
     if (keyCode == BACKSPACE) {
       if (password.length() > 0) {
         password = password.substring(0, password.length()-1);
@@ -121,14 +122,14 @@ void passwordCheck(String password, String acntpassword) {
 
   if (password.equals(acntpassword)) {
 
-    Passwordtype = 2;
+    enterPassword = 2;
   } else {
-    Passwordtype = 1;
+    enterPassword = 1;
   }
 }
 void usernameCheck(String username, String acntusername) {
   if (username.equals(acntusername)) {
-    Usernametype = false;
-    Passwordtype = 1;
+     enterUsername = false;
+    enterPassword = 1;
   }
 }
