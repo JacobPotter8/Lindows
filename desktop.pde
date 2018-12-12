@@ -6,11 +6,15 @@ void desktop() {
   button(#FFFFFF, 45, 45, 80, 80, 0, 0, "start game discord");
   button(#FFFFFF, 45, 145, 80, 80, 0, 0, "start game twitter");
     button(#FFFFFF, 45, 245, 80, 80, 0, 0, "start game edge");
+    button(#FFFFFF, 45, 345, 80, 80, 0, 0, "start game dagger");
 
   discord();
 twitter();
 edge();
+dagger();
 clock();
+
+
 }
 
 
@@ -29,6 +33,9 @@ void edge() {
   PImage edge; 
   edge = loadImage("edge.png");
   image(edge, 50, 250, 75, 75);
+}
+void dagger(){
+  rect( 50, 350, 75, 75);
 }
 
 
@@ -78,4 +85,19 @@ text(minute(),1170,685);
 text(hour(),1140,685);
 text(":",1190,685);
 text(":",1165,685);
+}
+void passwordCheck(String password, String acntpassword) {
+
+  if (password.equals(acntpassword)) {
+
+    enterPassword = 2;
+  } else {
+    enterPassword = 1;
+  }
+}
+void usernameCheck(String username, String acntusername) {
+  if (username.equals(acntusername)) {
+     enterUsername = false;
+    enterPassword = 1;
+  }
 }

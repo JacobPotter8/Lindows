@@ -1,8 +1,7 @@
 void gameDraw(){
-   
   if (playGame == 0){
-    image(menuBG,400,300);
-    image(Title,400,300);
+   image(menuBG,625,350);
+    image(Title,625,350);
     textSize(25);
     fill(#FFFFFF);
     text("Press T for instructions",30,570);
@@ -21,7 +20,7 @@ void gameDraw(){
   
   
   if (playGame == 1) {
-    image(gameBG,400,300);
+    image(gameBG,625,350);
     
     
 //Portal
