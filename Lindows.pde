@@ -18,11 +18,11 @@ boolean starttwitter;
 boolean closetwitter;
 boolean startedge;
 boolean closeedge;
-
+boolean startdagger;
+boolean closedagger;
 
 
 void setup() {
-
   size(1250, 700);
   profpic = loadImage("profpic.png");
   lgin1 = loadImage("lockscreen1.jpg");
