@@ -1,5 +1,6 @@
 void gameSetup() {
   if (test == true) {
+    frameRate(60);
     imageMode(CENTER);
     rectMode(CENTER);
     dagger1X = int(random(width));

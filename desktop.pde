@@ -7,7 +7,7 @@ void desktop() {
   button(#FFFFFF, 45, 145, 80, 80, 0, 0, "start game twitter");
     button(#FFFFFF, 45, 245, 80, 80, 0, 0, "start game edge");
     button(#FFFFFF, 45, 345, 80, 80, 0, 0, "start game dagger");
-
+    button(#FFFFFF, 45, 445, 80, 80, 0, 0, "start game calculator");
   discord();
 twitter();
 edge();

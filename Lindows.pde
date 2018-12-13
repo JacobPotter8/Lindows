@@ -108,6 +108,10 @@ boolean startdagger;
 boolean closedagger;
 boolean test;
 
+//Calculator Variables
+  float num1;
+  float num2;
+  float answer;
 void setup() {
 
   size(1250, 700);
@@ -180,9 +184,9 @@ void draw() {
     }
 
     playGame = 0;
-gameKeys();
+//gameKeys();
     gameDraw();
-keyReleased();
+
  
   }
 }
@@ -191,6 +195,7 @@ keyReleased();
 
 
 void keyPressed() {
+  gameKeys();
   if ( enterUsername == true) {
     if (keyCode == BACKSPACE) {
       if (username.length() > 0) {

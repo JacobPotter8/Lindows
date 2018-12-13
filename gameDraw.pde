@@ -21,9 +21,9 @@ void gameDraw(){
   
   if (playGame == 1) {
     image(gameBG,625,350);
-    text(""+keyS, 200, 200);
-  text(""+keyA, 100, 200);
-  text(""+keyD, 100, 100);
+    //text(""+keyS, 200, 200);
+  //text(""+keyA, 100, 200);
+  //text(""+keyD, 100, 100);
     
 //Portal
     
@@ -229,7 +229,7 @@ if(level > 4){
        playerDead = true;
     }
 
- image(explosion,explodeX,explodeY,300,300);
+ image(explosion,explodeX,explodeY);
     if(explodeActive > 1){
       explodeActive -= 1;
     }else{
@@ -244,7 +244,7 @@ if(level > 4){
         playerY = playerY - 5;
         if(movingLeft<1 && movingRight<1){
           image(FaceAway,playerX, playerY);
-        }
+            }
       }
       if (keyS == 1) {  
         playerY = playerY + 5;
