@@ -11,9 +11,9 @@ void desktop() {
   discord();
 twitter();
 edge();
-dagger();
-clock();
 
+clock();
+dagger();
 
 }
 
@@ -22,17 +22,17 @@ clock();
 void discord() {
   PImage discord; 
   discord = loadImage("accord.png");
-  image(discord, 50, 50, 75, 75);
+  image(discord, 50, 50);
 }
 void twitter() {
   PImage twitter; 
   twitter = loadImage("twitter.png");
-  image(twitter, 50, 150, 75, 75);
+  image(twitter, 50, 150);
 }
 void edge() {
   PImage edge; 
   edge = loadImage("edge.png");
-  image(edge, 50, 250, 75, 75);
+  image(edge, 50, 250);
 }
 void dagger(){
   rect( 50, 350, 75, 75);

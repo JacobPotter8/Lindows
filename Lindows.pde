@@ -119,7 +119,7 @@ void setup() {
   username = "";
   password = "";
   enterUsername = true;
-  playGame = 0;
+  //playGame = 0;
   test = true;
 }
 
@@ -128,7 +128,7 @@ void draw() {
 
 
   image(lgin1, 0, 0);
-  image(profpic, 500, 50, 125, 125);
+  image(profpic, 500, 50);
   fill(255, 0, 0);
   textSize(40);
   text("Account", 475, 250);
@@ -178,10 +178,12 @@ void draw() {
     if (test) {
       gameSetup();
     }
-    playGame = 0;
 
-    gameKeys();
+    playGame = 0;
+gameKeys();
     gameDraw();
+keyReleased();
+ 
   }
 }
 
@@ -216,4 +218,5 @@ void keyPressed() {
       password = password + key;
     }
   }
+  
 }

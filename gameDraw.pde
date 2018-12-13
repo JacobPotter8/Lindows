@@ -12,7 +12,7 @@ void gameDraw(){
       playGame = 1;
     }
     if(keyT == 1){
-      playGame = 3;
+      playGame = 0;
     }
     
     
@@ -21,7 +21,9 @@ void gameDraw(){
   
   if (playGame == 1) {
     image(gameBG,625,350);
-    
+    text(""+keyS, 200, 200);
+  text(""+keyA, 100, 200);
+  text(""+keyD, 100, 100);
     
 //Portal
     
@@ -90,7 +92,7 @@ void gameDraw(){
     fill(#CBC3C3);
     
 //Daggers
-image(dagger1,dagger1X,dagger1Y,30,60);
+image(dagger1,dagger1X,dagger1Y);
 dagger1Y += 8;
 if(dagger1Y > 650){
   dagger1X = int(random(width));
@@ -104,7 +106,7 @@ if(playerDead == false){
     score += 20;
   }
 }
-image(dagger2,dagger2X,dagger2Y,30,60);
+image(dagger2,dagger2X,dagger2Y);
 dagger2Y += 6;
 if(dagger2Y > 650){
   dagger2X = int(random(width));
@@ -118,7 +120,7 @@ if(playerDead == false){
     score += 20;
   }
 }
-image(dagger3,dagger3X,dagger3Y,30,60);
+image(dagger3,dagger3X,dagger3Y);
 dagger3Y += 5;
 if(dagger3Y > 650){
   dagger3X = int(random(width));
@@ -141,23 +143,23 @@ if(playerDead == false){
     }
     if (direction == 0) {
       guardX += guardDirectionSpeed;
-      image(guardRight,guardX, guardY,60,75);
+      image(guardRight,guardX, guardY);
     }
     if (direction == 1) {
       guardX -= guardDirectionSpeed;
-      image(guardLeft,guardX, guardY,60,75);
+      image(guardLeft,guardX, guardY);
     }
     if (direction == 2) {
       guardY += guardDirectionSpeed;
-      image(guardLeft,guardX, guardY,60,75);
+      image(guardLeft,guardX, guardY);
     }
     if (direction == 3) {
       guardY -= guardDirectionSpeed;
-      image(guardRight,guardX, guardY,60,75);
+      image(guardRight,guardX, guardY);
     }
     if (direction == 4) {
       guardY -= guardDirectionSpeed;
-      image(guardRight,guardX, guardY,60,75);
+      image(guardRight,guardX, guardY);
     }
     //Boundry for guard AI
     if (guardX < -25) {
@@ -201,7 +203,7 @@ if(level > 4){
 
     
 //goal and goal colour
-    image(coin,goalX, goalY,50,50);
+    image(coin,goalX, goalY);
 
  //hitboxes and change goal location
     if (abs(playerX-goalX) < 50 && abs(playerY-goalY)< 50) {
@@ -212,7 +214,7 @@ if(level > 4){
         goalY = 2000;
       }else{
       goalX = int(random(width));
-      goalY = int(random(250,550));
+      goalY = int(random(100,350));
       }
     }
      if (abs(playerX-badX) < 50 && abs(playerY-badY)< 50) {
@@ -241,13 +243,13 @@ if(level > 4){
       if (keyW == 1) {  
         playerY = playerY - 5;
         if(movingLeft<1 && movingRight<1){
-          image(FaceAway,playerX, playerY,50,100);
+          image(FaceAway,playerX, playerY);
         }
       }
       if (keyS == 1) {  
         playerY = playerY + 5;
          if(movingLeft<1 && movingRight<1){
-          image(Still,playerX, playerY,50,100);
+          image(Still,playerX, playerY);
          }
       }
       if (keyA == 1) {  
@@ -255,10 +257,10 @@ if(level > 4){
         movingLeft = 1;
             stepSwitch = stepSwitch + 1;
         if(stepSwitch<16){
-          image(RunL1,playerX, playerY,75,100);
+          image(RunL1,playerX, playerY);
         }
         if(stepSwitch>15){
-          image(RunL2,playerX, playerY,75,100);
+          image(RunL2,playerX, playerY);
         }
       }else{
         movingLeft = 0;
@@ -270,10 +272,10 @@ if(level > 4){
         movingRight = 1;
             stepSwitch = stepSwitch + 1;
         if(stepSwitch<16){
-          image(RunR1,playerX, playerY,75,100);
+          image(RunR1,playerX, playerY);
         }
         if(stepSwitch>15){
-          image(RunR2,playerX, playerY,75,100);
+          image(RunR2,playerX, playerY);
         }
       }else{
         movingRight = 0;
@@ -285,7 +287,7 @@ if(level > 4){
       moving = false;
     }
       if(moving == false){
-       image(Still,playerX,playerY,50,100);
+       image(Still,playerX,playerY);
       }
       
     if(stepSwitch>30){
@@ -294,20 +296,20 @@ if(level > 4){
     
 //Lives
     if(lives == 0){
-      image(ZeroLife,650,50,198,66);
+      image(ZeroLife,650,50);
     }
      if(lives == 1){
-      image(OneLife,650,50,198,66);
+      image(OneLife,650,50);
     }
      if(lives == 2){
-      image(TwoLife,650,50,198,66);
+      image(TwoLife,650,50);
     }
      if(lives == 3){
-      image(ThreeLife,650,50,198,66);
+      image(ThreeLife,650,50);
     }
 //PortalWarning
     if (badPActivateTime > portalWarnTime){
-      image(warnHearts,650,50,198,66);
+      image(warnHearts,650,50);
     }
     
     textSize(35);
@@ -327,8 +329,8 @@ if(level > 4){
     if (playerY<50) {
       playerY= 50;
     }
-    if (playerY>(550)) {
-      playerY= 550;
+    if (playerY>(650)) {
+      playerY= 650;
     }
     if (playerX>(width+25)) {
       playerX=-25;
@@ -337,7 +339,7 @@ if(level > 4){
 //Player Dead
     if(playerDead == true){
       playerX = int(random(width));
-      playerY = int(random(250,550));
+      playerY = int(random(150,650));
       lives = lives - 1;
       badPActive = false;
       portalSize = 150;
@@ -361,9 +363,9 @@ if(level > 4){
     guardDirectionSpeed = 2;
     enemySpeed = 5;
     playerX = int(random(width));
-    playerY = int(random(250,550));
+    playerY = int(random(150,650));
     goalX = int(random(width));
-    goalY = int(random(250,550));
+    goalY = int(random(150,650));
     guardX = 400;
     guardY = 300;
     portalWarnTime = 480;
@@ -378,7 +380,7 @@ if(level > 4){
   
 //Game Over
   if(playGame==2){
-    image(gameOver,400,300,800,600);
+    image(gameOver,400,300);
     textSize(50);
     text("Score:",250,490);
     text(score,400,490);
