@@ -1,5 +1,4 @@
 void calculator(){
-  PImage calculator;
   calculator = loadImage("calculator.png");
   image(calculator, 50, 450);
 }
@@ -8,16 +7,7 @@ void calculator(){
 
 
 void calculatoropen(){
-  
- noStroke();
- fill(0, 150, 120);
- rect(450, 50, 450,600); 
-  rect(450, 50, 450, 100);
-  fill(255);
-  rect(475, 75, 400, 50);
-  stroke(1);
- line(450, 153, 899, 153);
-  button(#FFFFFF, 475, 175, 60, 30, 0, 0, "Add");
+   button(#FFFFFF, 475, 175, 60, 30, 0, 0, "Add");
 button(#FFFFFF, 575, 175, 120, 30, 0, 0, "Substract");
 button(#FFFFFF, 475, 225, 90, 30, 0, 0, "Multiply");
 button(#FFFFFF, 575, 225, 80, 30, 0, 0, "Divide");
@@ -42,6 +32,15 @@ button(#FFFFFF, 725, 525, 80, 30, 0, 0, "0");
 button(#FFFFFF, 475, 525, 80, 30, 0, 0, "-");
 button(#FFFFFF, 575, 525, 80, 30, 0, 0, "Delete");
 button(#FFFFFF, 650, 590, 80, 30, 0, 0, "Enter");
+ noStroke();
+ fill(0, 150, 120);
+ rect(450, 50, 450,600); 
+  rect(450, 50, 450, 100);
+  fill(255);
+  rect(475, 75, 400, 50);
+  stroke(1);
+ line(450, 153, 899, 153);
+ 
  textSize(24);
  text("Add", 475, 200);
  text("Subtract", 600, 200); 
