@@ -79,6 +79,9 @@ PImage warnHearts;
 PImage discord; 
 PImage twitter;  
 PImage edge; 
+PImage discordImg;
+  PImage calculator;
+
 
 
 //Dagger variables
@@ -113,7 +116,6 @@ boolean closedagger;
 boolean test;
 boolean opencalculator;
 boolean closecalculator;
-PImage calculator;
 //Calculator Variables
   
   float num1;
@@ -136,9 +138,6 @@ PImage calculator;
   
 void setup() {
   size(1250, 700);
-  profpic = loadImage("profpic.png");
-  lgin1 = loadImage("lockscreen1.jpg");
-  lgin2 = loadImage("lgin2.png");
   rectMode(CENTER);
   ellipseMode(CENTER);
   username = "";
@@ -146,7 +145,7 @@ void setup() {
   enterUsername = true;
   //playGame = 0;
   test = true;
- 
+ Images();
 }
 
 
@@ -181,8 +180,7 @@ println(""+frameRate);
     login = false;
   }
   if (startdiscord == true) {
-    PImage discordImg;
-    discordImg = loadImage("discordimage.png");
+
     image(discordImg, 0, 0);
     button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closediscord");
   }

@@ -33,34 +33,10 @@ void gameSetup() {
     //Portal Stuff
     portalX = width/2;
     portalY = height/2;
-    portal = loadImage("PORTAL.png");
     portalSize = 150;
     portalWarnTime = 480;
     badPGrowSpeed = 1;
     //Loading Images
-    RunR1 = loadImage("NinjaRunR1.png");
-    RunR2 = loadImage("NinjaRunR2.png");
-    RunL1 = loadImage("NinjaRunL1.png");
-    RunL2 = loadImage("NinjaRunL2.png");
-    Still = loadImage("NinjaStill.png");
-    FaceAway = loadImage("NinjaAway.png");
-    menuBG = loadImage("menuBackground.jpg");
-    gameBG = loadImage("gameBackground.png");
-    ZeroLife = loadImage("0lives.png");
-    OneLife = loadImage("1lives.png");
-    TwoLife = loadImage("2lives.png");
-    ThreeLife = loadImage("3lives.png");
-    Title = loadImage("menuTitle.png");
-    gameOver = loadImage("endGame.png");
-    coin = loadImage("Coin.png");
-    guardLeft = loadImage("guardleft.png");
-    guardRight = loadImage("guardright.png");
-    rollTNT = loadImage("tnt.png");
-    dagger1 = loadImage("dagger.png");
-    dagger2 = loadImage("dagger.png");
-    dagger3 = loadImage("dagger.png");
-    explosion = loadImage("explode.png");
-    warnHearts = loadImage("warninglives.png");
-  }
+      }
   test = false;
 }

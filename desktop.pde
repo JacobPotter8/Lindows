@@ -1,6 +1,4 @@
 void desktop() {
-  
-  desk1 = loadImage("desktop1.jpg");
   background(desk1); 
   fill(0);
  rect( 1130, 670, 100, 45);
@@ -22,15 +20,12 @@ calculator();
 
 
 void discord() {
-  discord = loadImage("accord.png");
   image(discord, 50, 50);
 }
 void twitter() {
-  twitter = loadImage("twitter.png");
   image(twitter, 50, 150);
 }
 void edge() {
-  edge = loadImage("edge.png");
   image(edge, 50, 250);
 }
 void dagger(){
