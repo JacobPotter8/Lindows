@@ -1,6 +1,7 @@
 void desktop() {
+  
   desk1 = loadImage("desktop1.jpg");
-  image(desk1, 0, 0, width, height ); 
+  background(desk1); 
   fill(0);
  rect( 1130, 670, 100, 45);
   button(#FFFFFF, 45, 45, 80, 80, 0, 0, "start game discord");
@@ -8,13 +9,14 @@ void desktop() {
     button(#FFFFFF, 45, 245, 80, 80, 0, 0, "start game edge");
     button(#FFFFFF, 45, 345, 80, 80, 0, 0, "start game dagger");
     button(#FFFFFF, 45, 445, 80, 80, 0, 0, "start game calculator");
+    
   discord();
 twitter();
 edge();
 
 clock();
 dagger();
-
+calculator();
 }
 
 
@@ -71,12 +73,20 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
     }
     if (function.toLowerCase().equals("closedagger")) {
       closedagger=true;
-    }    
+    } 
+    if (function.toLowerCase().equals("start game calculator")) {
+      opencalculator=true;
+      calculatoropen();
+    }  
+        if (function.toLowerCase().equals("closecalculator")) {
+      closecalculator=true;
+    } 
     fill(whenpressed);
   }
   rectMode(CORNER);
   rect(cornerx, cornery, sizex, sizey);
 }
+
 void clock(){
 fill(255);
 textSize(16);
@@ -85,6 +95,7 @@ text(minute(),1170,685);
 text(hour(),1140,685);
 text(":",1190,685);
 text(":",1165,685);
+
 }
 void passwordCheck(String password, String acntpassword) {
 

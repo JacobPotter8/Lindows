@@ -107,13 +107,29 @@ boolean closeedge;
 boolean startdagger;
 boolean closedagger;
 boolean test;
+boolean opencalculator;
+boolean closecalculator;
 
 //Calculator Variables
   float num1;
   float num2;
   float answer;
+  boolean add = false;
+  boolean subtract = false;
+  boolean multiply = false;
+  boolean divide = false;
+  boolean square = false;
+  boolean squareroot = false;
+  boolean cube = false;
+  //Scientific Notation
+  boolean sn = false;
+  boolean sin = false;
+  boolean tan = false;
+  boolean cos = false;
+  boolean enter = false;
+  boolean power = false;
+  
 void setup() {
-
   size(1250, 700);
   profpic = loadImage("profpic.png");
   lgin1 = loadImage("lockscreen1.jpg");
@@ -125,11 +141,12 @@ void setup() {
   enterUsername = true;
   //playGame = 0;
   test = true;
+ 
 }
 
 
 void draw() {
-
+println(""+frameRate);
 
   image(lgin1, 0, 0);
   image(profpic, 500, 50);
@@ -160,7 +177,7 @@ void draw() {
   if (startdiscord == true) {
     PImage discordImg;
     discordImg = loadImage("discordimage.png");
-    image(discordImg, 0, 0, width, height);
+    image(discordImg, 0, 0);
     button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closediscord");
   }
 
@@ -182,6 +199,10 @@ void draw() {
     if (test) {
       gameSetup();
     }
+    if(opencalculator == true){
+     calculatoropen(); 
+      button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closecalculator");
+    }
 
     playGame = 0;
 //gameKeys();
@@ -189,6 +210,7 @@ void draw() {
 
  
   }
+  
 }
 
 
