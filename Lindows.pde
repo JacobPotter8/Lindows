@@ -76,6 +76,10 @@ PImage dagger2;
 PImage dagger3;
 PImage explosion;
 PImage warnHearts;
+PImage discord; 
+PImage twitter;  
+PImage edge; 
+
 
 //Dagger variables
 int dagger1X;
@@ -109,8 +113,9 @@ boolean closedagger;
 boolean test;
 boolean opencalculator;
 boolean closecalculator;
-
+PImage calculator;
 //Calculator Variables
+  
   float num1;
   float num2;
   float answer;
@@ -173,6 +178,7 @@ println(""+frameRate);
     desktop();
 
     clock();
+    login = false;
   }
   if (startdiscord == true) {
     PImage discordImg;

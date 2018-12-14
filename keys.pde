@@ -1,4 +1,4 @@
-  
+
    void gameKeys(){
        if(key == 'w' || key == 'W'){
          keyW = 1;

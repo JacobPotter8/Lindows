@@ -17,11 +17,12 @@ void calculatoropen(){
   rect(475, 75, 400, 50);
   stroke(1);
  line(450, 153, 899, 153);
-  button(#FFFFFF, 475, 175, 30, 80, 0, 0, "Add");
-button(#FFFFFF, 575, 175, 80, 30, 0, 0, "Substract");
-button(#FFFFFF, 475, 225, 80, 30, 0, 0, "Multiply");
+  button(#FFFFFF, 475, 175, 60, 30, 0, 0, "Add");
+button(#FFFFFF, 575, 175, 120, 30, 0, 0, "Substract");
+button(#FFFFFF, 475, 225, 90, 30, 0, 0, "Multiply");
 button(#FFFFFF, 575, 225, 80, 30, 0, 0, "Divide");
 button(#FFFFFF, 725, 175, 150, 30, 0, 0, "Square");
+button(#FFFFFF, 725, 300, 80, 30, 0, 0, "Cube");
 button(#FFFFFF, 725, 225, 80, 30, 0, 0, "Squareroot");
 button(#FFFFFF, 725, 325, 80, 30, 0, 0, "Power");
 button(#FFFFFF, 475, 275, 80, 30, 0, 0, "Sin");
@@ -77,10 +78,78 @@ text("Enter", 650, 615);
   
 }
 
-void Add(boolean Add){
-  if(Add == true){
+float addition(){
+  if(add == true){
   answer = num1 + num2;
   }
-  
+  return answer;
   
 }
+
+float subtract(){
+  if(subtract == true){
+   answer = num1 - num2; 
+  }
+  return answer;
+  }
+  
+  float multiply(){
+   if(multiply == true){
+    answer = num1*num2;
+    
+   }
+   return answer; 
+  }
+  
+  float divide(){
+    if(divide == true){
+      answer = num1/num2;
+    }
+    return answer;
+  }
+  float squared(){
+    if(square == true){
+      sq(num1);
+    }
+    return answer;
+  }
+  float cubed(){
+    if(cube == true){
+      answer = num1*num1*num1;
+    }
+    return answer;
+  }
+  float squareroot(){
+    if(squareroot == true){
+      answer = sqrt(num1);
+    }
+    return answer;
+  }
+  float sn(){
+   if(sn == true){
+    answer = num1*pow(10, num2); 
+     
+     
+   }
+    
+    return answer;
+  }
+  float sin(){
+    if(sin == true){
+    answer = sin(num1); 
+  }
+  return answer;
+      }
+      float cos(){
+    if(cos == true){
+    answer = cos(num1); 
+  }
+  return answer;
+      }
+      float tan(){
+    if(tan == true){
+    answer = tan(num1); 
+  }
+  return answer;
+      }
+      

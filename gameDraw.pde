@@ -176,7 +176,7 @@ if(playerDead == false){
     }
     
 //Auto Intelligents TNT
-image(rollTNT,badX, badY - 50, 50, 100);
+image(rollTNT,badX, badY - 50);
 
 if(level > 4){
   if (playerX > badX) {

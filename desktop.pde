@@ -22,17 +22,14 @@ calculator();
 
 
 void discord() {
-  PImage discord; 
   discord = loadImage("accord.png");
   image(discord, 50, 50);
 }
 void twitter() {
-  PImage twitter; 
   twitter = loadImage("twitter.png");
   image(twitter, 50, 150);
 }
 void edge() {
-  PImage edge; 
   edge = loadImage("edge.png");
   image(edge, 50, 250);
 }
