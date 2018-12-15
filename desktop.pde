@@ -11,10 +11,10 @@ void desktop() {
   discord();
 twitter();
 edge();
-
-clock();
 dagger();
 calculator();
+paint();
+clock();
 }
 
 
@@ -29,9 +29,11 @@ void edge() {
   image(edge, 50, 250);
 }
 void dagger(){
-  rect( 50, 350, 75, 75);
+  image(coin, 50, 350, 75, 75);
 }
-
+void paint(){
+  image(paint,50,550,75,75);
+}
 
 void button(color basecolour, float cornerx, float cornery, float sizex, float sizey, color whenhovered, color whenpressed, String function) {
   fill(basecolour);

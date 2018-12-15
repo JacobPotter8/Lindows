@@ -80,7 +80,8 @@ PImage discord;
 PImage twitter;  
 PImage edge; 
 PImage discordImg;
-  PImage calculator;
+PImage calculator;
+PImage paint;
 
 
 
@@ -117,25 +118,25 @@ boolean test;
 boolean opencalculator;
 boolean closecalculator;
 //Calculator Variables
-  
-  float num1;
-  float num2;
-  float answer;
-  boolean add = false;
-  boolean subtract = false;
-  boolean multiply = false;
-  boolean divide = false;
-  boolean square = false;
-  boolean squareroot = false;
-  boolean cube = false;
-  //Scientific Notation
-  boolean sn = false;
-  boolean sin = false;
-  boolean tan = false;
-  boolean cos = false;
-  boolean enter = false;
-  boolean power = false;
-  
+
+float num1;
+float num2;
+float answer;
+boolean add = false;
+boolean subtract = false;
+boolean multiply = false;
+boolean divide = false;
+boolean square = false;
+boolean squareroot = false;
+boolean cube = false;
+//Scientific Notation
+boolean sn = false;
+boolean sin = false;
+boolean tan = false;
+boolean cos = false;
+boolean enter = false;
+boolean power = false;
+
 void setup() {
   size(1250, 700);
   rectMode(CENTER);
@@ -145,12 +146,12 @@ void setup() {
   enterUsername = true;
   //playGame = 0;
   test = true;
- Images();
+  Images();
 }
 
 
 void draw() {
-println(""+frameRate);
+  println(""+frameRate);
 
   image(lgin1, 0, 0);
   image(profpic, 500, 50);
@@ -203,18 +204,15 @@ println(""+frameRate);
     if (test) {
       gameSetup();
     }
-    if(opencalculator == true){
-     calculatoropen(); 
+    if (opencalculator == true) {
+      calculatoropen(); 
       button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closecalculator");
     }
 
     playGame = 0;
-//gameKeys();
+    //gameKeys();
     gameDraw();
-
- 
   }
-  
 }
 
 
@@ -249,5 +247,4 @@ void keyPressed() {
       password = password + key;
     }
   }
-  
 }

@@ -32,4 +32,5 @@ void Images() {
   explosion = loadImage("explode.png");
   warnHearts = loadImage("warninglives.png");
   portal = loadImage("PORTAL.png");
+  paint = loadImage("paint.png");
 }
