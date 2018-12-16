@@ -2,11 +2,11 @@ void desktop() {
   background(desk1); 
   fill(0);
  rect( 1130, 670, 100, 45);
-  button(#FFFFFF, 45, 45, 80, 80, 0, 0, "start game discord");
-  button(#FFFFFF, 45, 145, 80, 80, 0, 0, "start game twitter");
-    button(#FFFFFF, 45, 245, 80, 80, 0, 0, "start game edge");
-    button(#FFFFFF, 45, 345, 80, 80, 0, 0, "start game dagger");
-    button(#FFFFFF, 45, 445, 80, 80, 0, 0, "start game calculator");
+  button(#FFFFFF, 45, 45, 75, 75, 0, 0, "start game discord");
+  button(#FFFFFF, 45, 145, 75, 75, 0, 0, "start game twitter");
+    button(#FFFFFF, 45, 245, 75, 75, 0, 0, "start game edge");
+    button(#FFFFFF, 45, 345, 75, 75, 0, 0, "start game dagger");
+    button(#FFFFFF, 45, 445, 75, 75, 0, 0, "start game calculator");
     
   discord();
 twitter();
@@ -20,19 +20,19 @@ clock();
 
 
 void discord() {
-  image(discord, 50, 50);
+  image(discord, 45, 45);
 }
 void twitter() {
-  image(twitter, 50, 150);
+  image(twitter, 45, 145);
 }
 void edge() {
-  image(edge, 50, 250);
+  image(edge, 45, 245);
 }
 void dagger(){
-  image(coin, 50, 350, 75, 75);
+  image(coin, 45, 345, 75, 75);
 }
 void paint(){
-  image(paint,50,550,75,75);
+  image(paint,45,545,75,75);
 }
 
 void button(color basecolour, float cornerx, float cornery, float sizex, float sizey, color whenhovered, color whenpressed, String function) {
@@ -75,6 +75,82 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
         if (function.toLowerCase().equals("closecalculator")) {
       closecalculator=true;
     } 
+    if (function.toLowerCase().equals("Add")) {
+      add=true;
+    }
+    if (function.toLowerCase().equals("Subtraction")) {
+      subtract=true;
+    }
+    if (function.toLowerCase().equals("Multiply")) {
+      multiply=true;
+    }
+    if (function.toLowerCase().equals("Divide")) {
+      divide=true;
+    }
+    if (function.toLowerCase().equals("Square")) {
+      square=true;
+    }
+    if (function.toLowerCase().equals("Cube")) {
+      cube=true;
+    }
+    if (function.toLowerCase().equals("Squareroot")) {
+      squareroot=true;
+    }
+    if (function.toLowerCase().equals("EE")) {
+      sn=true;
+    }
+    if (function.toLowerCase().equals("Sin")) {
+      sin=true;
+    }
+     if (function.toLowerCase().equals("Cos")) {
+      cos=true;
+    }
+     if (function.toLowerCase().equals("Tan")) {
+      tan=true;
+    }
+     if (function.toLowerCase().equals("Power")) {
+      power=true;
+    }
+     if (function.toLowerCase().equals("1")) {
+      one=true;
+    }
+     if (function.toLowerCase().equals("2")) {
+      two=true;
+    }
+     if (function.toLowerCase().equals("3")) {
+      three=true;
+    }
+     if (function.toLowerCase().equals("4")) {
+      four=true;
+    }
+     if (function.toLowerCase().equals("5")) {
+      five=true;
+    }
+     if (function.toLowerCase().equals("6")) {
+      six=true;
+    }
+     if (function.toLowerCase().equals("7")) {
+      seven=true;
+    }
+     if (function.toLowerCase().equals("8")) {
+      eight=true;
+    }
+     if (function.toLowerCase().equals("9")) {
+      nine=true;
+    }
+     if (function.toLowerCase().equals("0")) {
+      zero=true;
+    }
+     if (function.toLowerCase().equals("-")) {
+      negative=true;
+    }
+     if (function.toLowerCase().equals("Delete")) {
+      delete=true;
+    }
+     if (function.toLowerCase().equals("Enter")) {
+      enter=true;
+    }
+  
     fill(whenpressed);
   }
   rectMode(CORNER);

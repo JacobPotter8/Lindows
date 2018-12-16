@@ -1,6 +1,6 @@
 void calculator(){
   calculator = loadImage("calculator.png");
-  image(calculator, 50, 450);
+  image(calculator, 45, 445);
 }
 
 
@@ -151,4 +151,57 @@ float subtract(){
   }
   return answer;
       }
+      float xy(){
+        if(power == true){
+          answer = pow(num1, num2);
+        }  
+        return answer;
+      }
+      void one(){
+        if(one == true){
+          num1 = 1;
+        }  
+        
+      }
+      void two(){
+        if(two == true){
+          num1 = 2;
+        }  
+      }
+      void three(){
+        if(three == true){
+          num1 = 3;
+        }  
+      }
+      void four(){
+        if(four == true){
+          num1 = 4;
+        }  
+      }
+      void five(){
+        if(five == true){
+          num1 = 5;
+        }  
+      }
+      void six(){
+        if(six == true){
+          num1 = 6;
+        }  
+      }
+      void seven(){
+        if(seven == true){
+          num1 = 7;
+        }  
+      }
+      void eight(){
+        if(eight == true){
+          num1 = 8;
+        }  
+      }
+      void nine(){
+        if(nine == true){
+          num1 = 9;
+        }  
+      }
+      
       

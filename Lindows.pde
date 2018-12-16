@@ -136,6 +136,20 @@ boolean tan = false;
 boolean cos = false;
 boolean enter = false;
 boolean power = false;
+boolean one;
+boolean two;
+boolean three;
+boolean four;
+boolean five;
+boolean six;
+boolean seven;
+boolean eight;
+boolean nine;
+boolean zero;
+boolean negative;
+boolean delete;
+
+
 
 void setup() {
   size(1250, 700);
@@ -207,6 +221,10 @@ void draw() {
     if (opencalculator == true) {
       calculatoropen(); 
       button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closecalculator");
+   opencalculator = false;
+   }
+    if (closecalculator == true) {
+     desktop();
     }
 
     playGame = 0;
