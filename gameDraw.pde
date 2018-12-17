@@ -11,11 +11,13 @@ void gameDraw(){
     if(keySpace == 1){
       playGame = 1;
     }
-    if(keyT == 1){
-      playGame = 0;
-    }
+  if(keyT == 1){
+   playGame =3;
+   if(playGame == 3 && keySpace == 1){
+     playGame = 1;
+   }
     
-    
+  }
   }
   
   
@@ -401,7 +403,7 @@ if(level > 4){
   
   if(playGame == 3){
     fill(#000000);
-    rect(400,300,800,600);
+    rect(0,0,width,height);
     fill(#FFFFFF);
     textSize(23);
     text("- You have 3 lives.",30,30);
