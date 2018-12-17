@@ -82,7 +82,7 @@ PImage edge;
 PImage discordImg;
 PImage calculator;
 PImage paint;
-
+PImage cal;
 
 
 //Dagger variables
@@ -114,7 +114,7 @@ boolean startedge;
 boolean closeedge;
 boolean startdagger;
 boolean closedagger;
-boolean test;
+boolean launchgamesetup;
 boolean opencalculator;
 boolean closecalculator;
 //Calculator Variables
@@ -159,7 +159,7 @@ void setup() {
   password = "";
   enterUsername = true;
   //playGame = 0;
-  test = true;
+  launchgamesetup = true;
   Images();
 }
 
@@ -215,23 +215,24 @@ void draw() {
     startedge = false;
   }
   if (startdagger == true) {
-    if (test) {
+     playGame = 0;
+     gameDraw();
+    if (launchgamesetup) {
       gameSetup();
     }
+  }
     if (opencalculator == true) {
       calculatoropen(); 
       button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closecalculator");
-   opencalculator = false;
    }
     if (closecalculator == true) {
      desktop();
     }
 
-    playGame = 0;
-    //gameKeys();
-    gameDraw();
+    
   }
-}
+  
+
 
 
 
