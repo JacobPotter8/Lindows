@@ -70,7 +70,7 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
     } 
     if (function.toLowerCase().equals("start game calculator")) {
       opencalculator=true;
-      calculatoropen();
+      
     }  
         if (function.toLowerCase().equals("closecalculator")) {
       closecalculator=true;

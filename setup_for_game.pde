@@ -1,5 +1,5 @@
 void gameSetup() {
-  if (test == true) {
+  if (launchgamesetup == true) {
     frameRate(60);
     imageMode(CENTER);
     rectMode(CENTER);
@@ -38,5 +38,5 @@ void gameSetup() {
     badPGrowSpeed = 1;
     //Loading Images
       }
-  test = false;
+  launchgamesetup = false;
 }
