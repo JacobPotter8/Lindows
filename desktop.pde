@@ -1,4 +1,5 @@
 void desktop() {
+  imageMode(CENTER);
   background(desk1); 
   fill(0);
  rect( 1130, 670, 100, 45);
@@ -20,19 +21,19 @@ clock();
 
 
 void discord() {
-  image(discord, 45, 45);
+  image(discord, 80, 80);
 }
 void twitter() {
-  image(twitter, 45, 145);
+  image(twitter, 82, 180);
 }
 void edge() {
-  image(edge, 45, 245);
+  image(edge, 85, 280);
 }
 void dagger(){
-  image(coin, 45, 345, 75, 75);
+  image(coin, 83, 383, 75, 75);
 }
 void paint(){
-  image(paint,45,545,75,75);
+  image(paint,85,580,75,75);
 }
 
 void button(color basecolour, float cornerx, float cornery, float sizex, float sizey, color whenhovered, color whenpressed, String function) {

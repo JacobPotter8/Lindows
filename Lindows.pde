@@ -224,8 +224,10 @@ void draw() {
     if (opencalculator == true) {
       calculatoropen(); 
       button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closecalculator");
+      
    }
     if (closecalculator == true) {
+      
      desktop();
     }
 

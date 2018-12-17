@@ -1,6 +1,6 @@
 void calculator(){
   calculator = loadImage("calculator.png");
-  image(calculator, 45, 445);
+  image(calculator, 82, 482);
 }
 
 
@@ -67,7 +67,15 @@ text("(-)", 475, 550);
 text("Delete", 600, 550);
 text("0", 725, 550);
 text("Enter", 650, 615);
-
+one();
+two();
+three();
+four();
+five();
+six();
+seven();
+eight();
+nine();
 
 
   
