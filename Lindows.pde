@@ -165,7 +165,7 @@ void setup() {
 
 
 void draw() {
-  println(""+frameRate);
+ // println(""+frameRate);
 
   image(lgin1, 0, 0);
   image(profpic, 500, 50);
