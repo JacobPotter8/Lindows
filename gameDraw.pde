@@ -390,8 +390,8 @@ void gameDraw() {
     text("Click anywhere to continue...", 270, 580);
 
     if (mousePressed) {
-      //playGame = 0;
-      //score = 0;
+      playGame = 0;
+      score = 0;
     }
   }
   if (keyR == 1) {

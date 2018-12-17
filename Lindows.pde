@@ -148,7 +148,7 @@ boolean nine;
 boolean zero;
 boolean negative;
 boolean delete;
-
+boolean operation;
 
 
 void setup() {
@@ -165,7 +165,7 @@ void setup() {
 
 
 void draw() {
- // println(""+frameRate);
+  println(""+frameRate);
 
   image(lgin1, 0, 0);
   image(profpic, 500, 50);
@@ -233,12 +233,6 @@ void draw() {
 
     
   }
-  
-
-
-
-
-
 void keyPressed() {
   gameKeys();
   if ( enterUsername == true) {
