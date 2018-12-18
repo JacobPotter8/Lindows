@@ -230,7 +230,7 @@ void draw() {
       
    }
     if (closecalculator == true) {
-      
+      clear();
      desktop();
     }
     if (closedagger == true) {

@@ -77,7 +77,7 @@ void calculatoropen() {
   text("" + seven, 475, 475);
   text("" + eight, 575, 475);
   text("" + nine, 725, 475);
-  text("" + clear, 925, 475);
+ // text("" + clear, 925, 475);
 
   one();
   two();
