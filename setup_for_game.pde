@@ -37,6 +37,6 @@ void gameSetup() {
     portalWarnTime = 480;
     badPGrowSpeed = 1;
     //Loading Images
-      }
+  }
   launchgamesetup = false;
 }
