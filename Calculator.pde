@@ -77,7 +77,7 @@ void calculatoropen() {
   text("" + seven, 475, 475);
   text("" + eight, 575, 475);
   text("" + nine, 725, 475);
- // text("" + clear, 925, 475);
+ text("" + clearcal, 925, 475);
 
   one();
   two();
@@ -268,5 +268,31 @@ void nine() {
     }
   }
 }
+void clearcal(){
+  if(clearcal == true){
+   one = false;
+   two = false;
+   three = false;
+   four = false;
+   five = false;
+   six = false;
+   seven = false;
+   eight = false;
+   nine = false;
+   add  = false;
+   subtract  = false;
+   multiply  = false;
+   divide  = false;
+   sn  = false;
+   tan  = false;
+   sin  = false;
+   cos = false;
+   power = false;
+   square = false;
+   cube = false;
+   squareroot = false;
+  }
+  }
+    
 
   

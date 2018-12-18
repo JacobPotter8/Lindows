@@ -152,7 +152,7 @@ boolean zero;
 boolean negative;
 boolean delete;
 boolean operation;
-
+boolean clearcal;
 
 void setup() {
   size(1250, 700);

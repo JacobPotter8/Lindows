@@ -145,7 +145,7 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
       negative=true;
     }
     if (function.toLowerCase().equals("Clear")) {
-      clear=true;
+      clearcal=true;
     }
     if (function.toLowerCase().equals("Enter")) {
       enter=true;

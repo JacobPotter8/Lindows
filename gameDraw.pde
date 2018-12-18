@@ -392,6 +392,7 @@ void gameDraw() {
     fill(#CBC3C3);
     text("Click anywhere to continue...", 270, 580);
   if (mousePressed) {
+     playGame2 = false;
       playGame1 = true;
           button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closedagger");
       score = 0;
