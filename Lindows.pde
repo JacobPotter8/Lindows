@@ -233,6 +233,10 @@ void draw() {
       
      desktop();
     }
+    if (closedagger == true) {
+     clear();
+     desktop();
+    }
 
     
   }

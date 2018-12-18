@@ -1,4 +1,5 @@
 void gameDraw() {
+       button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closedagger");
   if (playGame0 == true) {
     image(menuBG, 625, 350);
     image(Title, 625, 350);
@@ -392,7 +393,7 @@ void gameDraw() {
     text("Click anywhere to continue...", 270, 580);
   if (mousePressed) {
       playGame1 = true;
-      
+          button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closedagger");
       score = 0;
     }
     
@@ -418,7 +419,7 @@ void gameDraw() {
 
 
     if (mousePressed == true) {
-      playGame0 =true;
+      playGame1 =true;
     }
   }
 }
