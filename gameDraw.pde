@@ -1,5 +1,5 @@
 void gameDraw() {
-  if (playGame == 0) {
+  if (playGame0 == true) {
     image(menuBG, 625, 350);
     image(Title, 625, 350);
     textSize(25);
@@ -9,18 +9,19 @@ void gameDraw() {
     textSize(40);
     text("Press space to play", 220, 500);
     if (keySpace == 1) {
-      playGame = 1;
+      playGame1 = true;
     }
     if (keyT == 1) {
-      playGame =3;
-      if (playGame == 3 && keySpace == 1) {
-        playGame = 1;
+      playGame3 =true;
+      if (playGame3 == true && keySpace == 1) {
+        playGame1 = true;
       }
     }
   }
 
 
-  if (playGame == 1) {
+  if (playGame1 == true) {
+    keySpace = 0;
     image(gameBG, 625, 350);
     //text(""+keyS, 200, 200);
     //text(""+keyA, 100, 200);
@@ -353,7 +354,7 @@ void gameDraw() {
     //No Lives Left
     if (lives == 0) {
       println("Game Over");
-      playGame = 2;
+      
       level = 1;
       goldCollectedLevel = 0;
       badX = 2000;
@@ -374,10 +375,11 @@ void gameDraw() {
       portalWarn = false;
 
       lives = 3;
+      playGame2 = true;
     }
   }
   //Game Over
-  if (playGame==2) {
+  if (playGame2 == true) {
     clear();
     image(gameOver, 400, 300);
     textSize(50);
@@ -388,15 +390,17 @@ void gameDraw() {
     textSize(20);
     fill(#CBC3C3);
     text("Click anywhere to continue...", 270, 580);
-
-    if (mousePressed) {
-      playGame = 0;
+  if (mousePressed) {
+      playGame1 = true;
+      
       score = 0;
     }
+    
   }
+
   if (keyR == 1) {
     highscore = 0;
-  } else if (playGame == 3) {
+  } else if (playGame3 == true) {
     fill(#000000);
     rect(0, 0, width, height);
     fill(#FFFFFF);
@@ -414,7 +418,7 @@ void gameDraw() {
 
 
     if (mousePressed == true) {
-      playGame = 0;
+      playGame0 =true;
     }
   }
 }

@@ -1,6 +1,6 @@
 int playerX;
 int playerY;
-int playGame;
+//int playGame;
 int keyW;
 int keyA;
 int keyS;
@@ -18,7 +18,10 @@ int highscore;
 int explodeX;
 int explodeY;
 int explodeActive;
-
+boolean playGame0;
+boolean playGame1;
+boolean playGame2;
+boolean playGame3;
 //Objects
 int goalX;
 int goalY;
@@ -215,7 +218,7 @@ void draw() {
     startedge = false;
   }
   if (startdagger == true) {
-     playGame = 0;
+     playGame0 = true;
      gameDraw();
     if (launchgamesetup) {
       gameSetup();
