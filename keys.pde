@@ -51,9 +51,9 @@ void keyReleased() {
     keyR = 0;
   }
 
-  //if(key == ' '){
-  //   keySpace = 0;
-  //}
+  if(key == ' '){
+     keySpace = 0;
+  }
 
   if (key == 't' || key == 'T') {
     keyT = 0;

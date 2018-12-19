@@ -99,10 +99,10 @@ PImage profpic;
 PImage lgin1;
 PImage lgin2;
 String password;
-String acntpassword = "h";
+String acntpassword = "heeman";
 boolean login;
 String username;
-String acntusername = "h";
+String acntusername = "hee";
 Boolean enterUsername;
 int enterPassword = 0;
 //enterPassword: 0 turns it off. 1 Indicates the password is off but it does not switch back to enterUsername. 2 Indicates the password was correct.
@@ -168,11 +168,8 @@ void setup() {
   launchgamesetup = true;
   launchpaintsetup = true;
   Images();
-  loop();
-  if(launchpaintsetup == true && openpaint == true){
-    paintSetup();
   }
-}
+
 
 
 void draw() {
@@ -246,13 +243,10 @@ void draw() {
      desktop();
     }
     if (openpaint == true) {
-      
-    paintDraw();
-    button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closepaint");
-   if(launchpaintsetup == true){
-      paintSetup();
+     launch("H:/Coding/Lindows/MSpant.url");
+   openpaint = false;
     }
-  }
+  
 
   if (closepaint == true) {
 

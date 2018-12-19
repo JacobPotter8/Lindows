@@ -12,13 +12,15 @@ void gameDraw() {
     if (keySpace == 1) {
       playGame1 = true;
     }
-    if (keyT == 1) {
-      playGame3 =true;
-      if (playGame3 == true && keySpace == 1) {
-        playGame1 = true;
+    if (keyCode == 'T') {
+      playGame3 = true;
+    }
+      if (keyCode  == 'Y') {
+        playGame3 = false;
+        playGame0 = true;
       }
     }
-  }
+  
 
 
   if (playGame1 == true) {

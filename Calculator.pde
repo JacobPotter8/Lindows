@@ -80,8 +80,9 @@ text("" + add, 475, 375 );
   text("" + sn, 475, 375 );
   text("" + enter, 575, 375);
   text("" + power, 725, 375);
- /**
+ 
   text("" + one, 475, 375 );
+  
   text("" + two, 575, 375);
   text("" + three, 725, 375);
   text("" + four, 475, 425 );
@@ -91,16 +92,10 @@ text("" + add, 475, 375 );
   text("" + eight, 575, 475);
   text("" + nine, 725, 475);
   text("" + clearcal, 925, 475);
-*/
-  one();
-  two();
-  three();
-  four();
-  five();
-  six();
-  seven();
-  eight();
-  nine();
+
+  
+   one(); two(); three(); four();   five();   six(); seven();   eight();   nine();
+
   addition();
   subtract();
   multiply();
