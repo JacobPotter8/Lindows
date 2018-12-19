@@ -8,6 +8,7 @@ void desktop() {
   button(#FFFFFF, 45, 245, 75, 75, 0, 0, "start game edge");
   button(#FFFFFF, 45, 345, 75, 75, 0, 0, "start game dagger");
   button(#FFFFFF, 45, 445, 75, 75, 0, 0, "start game calculator");
+  button(#FFFFFF, 45, 545, 75, 75, 0, 0, "start game paint");
 
   discord();
   twitter();
@@ -74,6 +75,12 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
     }  
     if (function.toLowerCase().equals("closecalculator")) {
       closecalculator=true;
+    } 
+     if (function.toLowerCase().equals("start game paint")) {
+      openpaint=true;
+    }  
+    if (function.toLowerCase().equals("closeapaint")) {
+      closepaint=true;
     } 
     if (function.toLowerCase().equals("Add")) {
       add=true;

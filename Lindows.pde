@@ -120,6 +120,9 @@ boolean closedagger;
 boolean launchgamesetup;
 boolean opencalculator;
 boolean closecalculator;
+boolean closepaint;
+boolean openpaint;
+boolean canvas = true;
 //Calculator Variables
 
 float num1;
@@ -139,20 +142,20 @@ boolean tan = false;
 boolean cos = false;
 boolean enter = false;
 boolean power = false;
-boolean one;
-boolean two;
-boolean three;
-boolean four;
-boolean five;
-boolean six;
-boolean seven;
-boolean eight;
-boolean nine;
-boolean zero;
-boolean negative;
-boolean delete;
-boolean operation;
-boolean clearcal;
+boolean one = false;
+boolean two = false;
+boolean three = false;
+boolean four = false;
+boolean five = false;
+boolean six = false;
+boolean seven = false;
+boolean eight = false;
+boolean nine = false;
+boolean zero = false;
+boolean negative = false;
+boolean operation = false;
+boolean clearcal = false;
+
 
 void setup() {
   size(1250, 700);
@@ -199,7 +202,7 @@ void draw() {
   }
   if (startdiscord == true) {
 
-    image(discordImg, 0, 0);
+    image(discordImg, 625, 350);
     button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closediscord");
   }
 
@@ -230,13 +233,23 @@ void draw() {
       
    }
     if (closecalculator == true) {
-      clear();
+      
      desktop();
     }
     if (closedagger == true) {
      clear();
      desktop();
     }
+    if (openpaint == true) {
+
+    paintDraw();
+    button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closepaint");
+  }
+
+  if (closepaint == true) {
+
+    desktop();
+  }
 
     
   }

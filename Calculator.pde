@@ -67,7 +67,20 @@ void calculatoropen() {
   text("Clear", 600, 550);
   text("0", 725, 550);
   text("Enter", 650, 615);
-
+text("" + add, 475, 375 );
+  text("" + subtract, 575, 375);
+  text("" + multiply, 725, 375);
+  text("" + divide, 475, 425 );
+  text("" + square, 575, 425 );
+  text("" + cube, 725, 425);
+  text("" + squareroot, 475, 475);
+  text("" + sin, 575, 475);
+  text("" + tan, 725, 475);
+  text("" + cos, 925, 475);
+  text("" + sn, 475, 375 );
+  text("" + enter, 575, 375);
+  text("" + power, 725, 375);
+ /**
   text("" + one, 475, 375 );
   text("" + two, 575, 375);
   text("" + three, 725, 375);
@@ -77,8 +90,8 @@ void calculatoropen() {
   text("" + seven, 475, 475);
   text("" + eight, 575, 475);
   text("" + nine, 725, 475);
- text("" + clearcal, 925, 475);
-
+  text("" + clearcal, 925, 475);
+*/
   one();
   two();
   three();
@@ -100,7 +113,7 @@ void calculatoropen() {
   cosign();
   tangent();
   xy();
- 
+  clearcalculator();
   fill(0);
   if (operation == false) {
     text(num1, 795, 110);
@@ -111,90 +124,173 @@ void calculatoropen() {
   }
 }
 
-float addition() {
+void clearcalculator() {
+  if (clearcal == true) {
+    one = false;
+    two = false;
+    three = false;
+    four = false;
+    five = false;
+    six = false;
+    seven = false;
+    eight = false;
+    nine = false;
+    add  = false;
+    subtract  = false;
+    multiply  = false;
+    divide  = false;
+    sn  = false;
+    tan  = false;
+    sin  = false;
+    cos = false;
+    power = false;
+    square = false;
+    cube = false;
+    squareroot = false;
+  }
+}
+void addition() {
   if (add == true) {
     fill(0);
     textSize(24);
     text(num1 + "+" + num2, 795, 110);
+  } 
+  if (enter == true) {
+
+
     answer = num1 + num2;
   } 
-  return answer;
+  //return answer;
 }
 
-float subtract() {
+void subtract() {
   if (subtract == true) {
     fill(0);
     textSize(24);
     text(num1 + "-" + num2, 45, 45);
+  } 
+  if (enter == true) {
     answer = num1 - num2;
   }
-  return answer;
+
+  //return answer;
 }
 
-float multiply() {
+void multiply() {
   if (multiply == true) {
     fill(0);
     textSize(24);
     text(num1 + "*" + num2, 480, 75);
+  } 
+
+  if (enter == true) {
     answer = num1*num2;
   }
-  return answer;
+  //return answer;
 }
 
-float divide() {
+void divide() {
   if (divide == true) {
+    fill(0);
+    textSize(24);
+    text(num1 + "/" + num2, 480, 75);
+  } 
+  if (enter == true) {
     answer = num1/num2;
   }
-  return answer;
+
+  //return answer;
 }
-float squared() {
+void squared() {
   if (square == true) {
-    sq(num1);
+    fill(0);
+    textSize(24);
+    text(num1 + "^2", 480, 75);
+  } 
+  if (enter == true) {
+    answer = sq(num1);
   }
-  return answer;
+
+  //return answer;
 }
-float cubed() {
+void cubed() {
   if (cube == true) {
+    fill(0);
+    textSize(24);
+    text(num1 + "^3", 480, 75);
+  } 
+  if (enter == true) {
     answer = num1*num1*num1;
   }
-  return answer;
+  //return answer;
 }
-float squareroot() {
+void squareroot() {
   if (squareroot == true) {
+    fill(0);
+    textSize(24);
+    text(" √" + num1, 480, 75);
+  }
+  if (enter == true) {
     answer = sqrt(num1);
   }
-  return answer;
+
+ // return answer;
 }
-float sn() {
+void sn() {
   if (sn == true) {
+    fill(0);
+    textSize(24);
+    text(num1 + "*10^" + num2, 480, 75);
+  }
+  if (enter == true) {
     answer = num1*pow(10, num2);
   }
 
-  return answer;
+  //return answer;
 }
-float sign() {
+void sign() {
   if (sin == true) {
+    fill(0);
+    textSize(24);
+    text("sin(" + num1 +")", 480, 75);
+  }
+  if (enter == true) {
     answer = sin(num1);
   }
-  return answer;
+ // return answer;
 }
-float cosign() {
+void cosign() {
   if (cos == true) {
+    fill(0);
+    textSize(24);
+    text("cos(" + num1 +")", 480, 75);
+  }
+  if (enter == true) {
     answer = cos(num1);
   }
-  return answer;
+  //return answer;
 }
-float tangent() {
+void tangent() {
   if (tan == true) {
+    fill(0);
+    textSize(24);
+    text("tan(" + num1 +")", 480, 75);
+  }
+  if (enter == true) {
     answer = tan(num1);
   }
-  return answer;
+ // return answer;
 }
-float xy() {
+void xy() {
   if (power == true) {
+    fill(0);
+    textSize(24);
+    text(num1+"^" +num2, 480, 75);
+  }
+  if (enter == true) {
     answer = pow(num1, num2);
   }  
-  return answer;
+ // return answer;
 }
 void one() {
   if (one == true) {
@@ -268,31 +364,3 @@ void nine() {
     }
   }
 }
-void clearcal(){
-  if(clearcal == true){
-   one = false;
-   two = false;
-   three = false;
-   four = false;
-   five = false;
-   six = false;
-   seven = false;
-   eight = false;
-   nine = false;
-   add  = false;
-   subtract  = false;
-   multiply  = false;
-   divide  = false;
-   sn  = false;
-   tan  = false;
-   sin  = false;
-   cos = false;
-   power = false;
-   square = false;
-   cube = false;
-   squareroot = false;
-  }
-  }
-    
-
-  
