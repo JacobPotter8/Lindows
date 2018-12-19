@@ -79,13 +79,13 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
      if (function.toLowerCase().equals("start game paint")) {
       openpaint=true;
     }  
-    if (function.toLowerCase().equals("closeapaint")) {
+    if (function.toLowerCase().equals("closepaint")) {
       closepaint=true;
     } 
     if (function.toLowerCase().equals("Add")) {
       add=true;
     }
-    if (function.toLowerCase().equals("Subtraction")) {
+    if (function.toLowerCase().equals("Subtract")) {
       subtract=true;
     }
     if (function.toLowerCase().equals("Multiply")) {

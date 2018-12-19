@@ -122,13 +122,13 @@ boolean opencalculator;
 boolean closecalculator;
 boolean closepaint;
 boolean openpaint;
-boolean canvas = true;
+boolean launchpaintsetup;
 //Calculator Variables
 
 float num1;
 float num2;
 float answer;
-boolean add = false;
+boolean add = true;
 boolean subtract = false;
 boolean multiply = false;
 boolean divide = false;
@@ -166,7 +166,12 @@ void setup() {
   enterUsername = true;
   //playGame = 0;
   launchgamesetup = true;
+  launchpaintsetup = true;
   Images();
+  loop();
+  if(launchpaintsetup == true && openpaint == true){
+    paintSetup();
+  }
 }
 
 
@@ -241,9 +246,12 @@ void draw() {
      desktop();
     }
     if (openpaint == true) {
-
+      
     paintDraw();
     button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closepaint");
+   if(launchpaintsetup == true){
+      paintSetup();
+    }
   }
 
   if (closepaint == true) {
