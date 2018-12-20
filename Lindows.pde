@@ -3,6 +3,7 @@
 //Jacob is handing in the project
 //Make Chrome the default browser
 //DO NOT press enter in the calculator screen!!
+//All internet shortcuts MUST go on the desktop!!
 int playerX;
 int playerY;
 //int playGame;

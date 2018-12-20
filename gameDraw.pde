@@ -8,7 +8,7 @@ void gameDraw() {
     text("Press T for instructions", 30, 570);
     fill(#96FF89);
     textSize(40);
-    text("Press space to play", 220, 500);
+    text("Press space to play", 425, 650);
     if (keySpace == 1) {
       playGame1 = true;
     }
@@ -301,20 +301,20 @@ void gameDraw() {
 
     //Lives
     if (lives == 0) {
-      image(ZeroLife, 650, 50);
+      image(ZeroLife, 1145, 50);
     }
     if (lives == 1) {
-      image(OneLife, 650, 50);
+      image(OneLife, 1145, 50);
     }
     if (lives == 2) {
-      image(TwoLife, 650, 50);
+      image(TwoLife, 1145, 50);
     }
     if (lives == 3) {
-      image(ThreeLife, 650, 50);
+      image(ThreeLife, 1145, 50);
     }
     //PortalWarning
     if (badPActivateTime > portalWarnTime) {
-      image(warnHearts, 650, 50);
+      image(warnHearts, 1145, 50);
     }
 
     textSize(35);
@@ -418,7 +418,7 @@ void gameDraw() {
     text("    stand in the portal for a total of 5 seconds.", 30, 210);
     text("- The portal will go unstable, your lives turn black as a warning.", 30, 240);
     text("- The unstable portal will consume a life if you are cought in it.", 30, 270);
-    text("Release to continue...", 30, 650);
+    text("Press 'Y' to continue...", 30, 650);
 
 
     if (mousePressed == true) {
