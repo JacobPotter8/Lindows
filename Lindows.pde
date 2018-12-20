@@ -3,13 +3,11 @@
 //Jacob is handing in the project
 //Make Chrome the default browser
 //DO NOT press enter in the calculator screen!!
-<<<<<<< HEAD
-//All internet shortcuts MUST go on the desktop!!
-=======
+
 
 //Username : hee
 //Password heeman
->>>>>>> e7e9ad5816a4ff68ffc0aeb0128171022fe44b72
+
 int playerX;
 int playerY;
 //int playGame;
