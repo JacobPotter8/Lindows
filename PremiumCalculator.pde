@@ -1,12 +1,15 @@
-void calculator() {
+void premiumcalculator() {
+  /**
   calculator = loadImage("calculator.png");
   image(calculator, 82, 482);
+  */
 }
 
 
 
 
-void calculatoropen() {
+void premiumcalculatoropen() {
+  /**
   button(#FFFFFF, 475, 175, 60, 30, 0, 0, "Add");
   button(#FFFFFF, 575, 175, 120, 30, 0, 0, "Substract");
   button(#FFFFFF, 475, 225, 90, 30, 0, 0, "Multiply");
@@ -358,4 +361,5 @@ void nine() {
       num2 =9;
     }
   }
+  */
 }

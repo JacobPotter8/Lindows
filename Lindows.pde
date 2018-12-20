@@ -124,38 +124,48 @@ boolean closepaint;
 boolean openpaint;
 boolean launchpaintsetup;
 //Calculator Variables
-
 float num1;
 float num2;
 float answer;
-boolean add = true;
-boolean subtract = false;
-boolean multiply = false;
-boolean divide = false;
-boolean square = false;
-boolean squareroot = false;
-boolean cube = false;
+boolean add;
+boolean subtract;
+boolean divide;
+boolean multiply;
+boolean operator = false;
+String operation;
+//Premium Calculator Variables
+/**
+float prmnum1;
+float prmnum2;
+float prmanswer;
+boolean prmadd = true;
+boolean prmsubtract = false;
+boolean prmmultiply = false;
+boolean prmdivide = false;
+boolean prmsquare = false;
+boolean prmsquareroot = false;
+boolean prmcube = false;
 //Scientific Notation
-boolean sn = false;
-boolean sin = false;
-boolean tan = false;
-boolean cos = false;
-boolean enter = false;
-boolean power = false;
-boolean one = false;
-boolean two = false;
-boolean three = false;
-boolean four = false;
-boolean five = false;
-boolean six = false;
-boolean seven = false;
-boolean eight = false;
-boolean nine = false;
-boolean zero = false;
-boolean negative = false;
-boolean operation = false;
-boolean clearcal = false;
-
+boolean prmsn = false;
+boolean prmsin = false;
+boolean prmtan = false;
+boolean prmcos = false;
+boolean prmenter = false;
+boolean prmpower = false;
+boolean prmone = false;
+boolean prmtwo = false;
+boolean prmthree = false;
+boolean prmfour = false;
+boolean prmfive = false;
+boolean prmsix = false;
+boolean prmseven = false;
+boolean prmeight = false;
+boolean prmnine = false;
+boolean prmzero = false;
+boolean prmnegative = false;
+boolean prmoperation = false;
+boolean prmclearcal = false;
+*/
 
 void setup() {
   size(1250, 700);
@@ -235,7 +245,7 @@ void draw() {
       
    }
     if (closecalculator == true) {
-      
+      frameRate(60);
      desktop();
     }
     if (closedagger == true) {
@@ -257,6 +267,7 @@ void draw() {
   }
 void keyPressed() {
   gameKeys();
+
   if ( enterUsername == true) {
     if (keyCode == BACKSPACE) {
       if (username.length() > 0) {
@@ -270,6 +281,7 @@ void keyPressed() {
       username = username + key;
     }
   }
+  
 
   if ( enterUsername == false) {
     if (keyCode == BACKSPACE) {

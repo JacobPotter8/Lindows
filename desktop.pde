@@ -81,7 +81,9 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
     }  
     if (function.toLowerCase().equals("closepaint")) {
       closepaint=true;
+      
     } 
+    /**
     if (function.toLowerCase().equals("Add")) {
       add=true;
     }
@@ -156,7 +158,9 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
     }
     if (function.toLowerCase().equals("Enter")) {
       enter=true;
-    }
+  */  
+  
+
 
     fill(whenpressed);
   }
