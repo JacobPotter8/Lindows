@@ -9,7 +9,7 @@ void desktop() {
   button(#FFFFFF, 45, 345, 75, 75, 0, 0, "start game dagger");
   button(#FFFFFF, 45, 445, 75, 75, 0, 0, "start game calculator");
   button(#FFFFFF, 45, 545, 75, 75, 0, 0, "start game paint");
-
+button(#FFFFFF, 145, 45, 75, 75, 0, 0, "start game premiumcal");
   discord();
   twitter();
   edge();
@@ -17,6 +17,7 @@ void desktop() {
   calculator();
   paint();
   clock();
+  premiumcalculatoricon();
 }
 
 
@@ -35,6 +36,9 @@ void dagger() {
 }
 void paint() {
   image(paint, 85, 580, 75, 75);
+}
+void premiumcalculatoricon(){
+  image(premiumcalculator, 180, 82);
 }
 
 void button(color basecolour, float cornerx, float cornery, float sizex, float sizey, color whenhovered, color whenpressed, String function) {
@@ -81,6 +85,12 @@ void button(color basecolour, float cornerx, float cornery, float sizex, float s
     }  
     if (function.toLowerCase().equals("closepaint")) {
       closepaint=true;
+    }
+      if (function.toLowerCase().equals("start game premiumcal")) {
+      openprmcal=true;
+    }  
+    if (function.toLowerCase().equals("closepremiumcal")) {
+      closeprmcal=true;
       
     } 
     /**

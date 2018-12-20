@@ -33,4 +33,5 @@ void Images() {
   warnHearts = loadImage("warninglives.png");
   portal = loadImage("PORTAL.png");
   paint = loadImage("paint.png");
+  premiumcalculator = loadImage("premiumcalculator.png");
 }

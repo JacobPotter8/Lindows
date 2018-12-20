@@ -5,7 +5,7 @@ void calculator(){
 }
 void calculatoropen(){
   fill(123, 56, 150);
-  rect(450, 50, 450, 125);
+  rect(450, 50, 450, 165);
      frameRate(25);
 
   noStroke();
@@ -21,7 +21,19 @@ void calculatoropen(){
   }
   if(answer > 0){
     text("=", 720, 120);
-  text(""+answer, 760, 125);
+  text(""+answer, 760, 120);
+  
+  }
+  textSize(16);
+  text("Press H for controls", 475, 185);
+  if(key == 'h'){
+    fill(123,56,150);
+    rect(450,200,450,165);
+    fill(0);
+    text("Use numberpad and operation signs to make equations", 460, 210);
+    text(" Use C to clear the calculator", 460, 230);
+    text(" Use E to enter your numbers", 460, 250);
+    text(" You can't do equations with more than two numbers", 460, 270);
   }
   one();
   two();

@@ -86,7 +86,7 @@ PImage discordImg;
 PImage calculator;
 PImage paint;
 PImage cal;
-
+PImage premiumcalculator;
 
 //Dagger variables
 int dagger1X;
@@ -123,6 +123,9 @@ boolean closecalculator;
 boolean closepaint;
 boolean openpaint;
 boolean launchpaintsetup;
+//PremiumCalculator
+boolean openprmcal;
+boolean closeprmcal;
 //Calculator Variables
 float num1;
 float num2;
@@ -241,7 +244,7 @@ void draw() {
   }
     if (opencalculator == true) {
       calculatoropen(); 
-      button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closecalculator");
+      button(#FFFFFF, 875, 50, 25, 25, 0, 0, "closecalculator");
       
    }
     if (closecalculator == true) {
@@ -259,6 +262,21 @@ void draw() {
   
 
   if (closepaint == true) {
+
+    desktop();
+  }
+  if (openprmcal == true) {
+    fill(128, 240, 128);
+     rect(500, 200, 500, 300);
+     textSize(26);
+     fill(255, 20, 180);
+     text("Please pay $169.99 for this feature", 520, 250);
+     text("We cannot guarantee it is functional", 520, 320);
+     button(#FFFFFF, 973, 200,25, 25, 0, 0, "closepremiumcal");
+    }
+  
+
+  if (closeprmcal == true) {
 
     desktop();
   }

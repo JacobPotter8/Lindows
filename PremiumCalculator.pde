@@ -1,3 +1,5 @@
+//Please pay $168.99 to unlock these premium features :)
+
 void premiumcalculator() {
   /**
   calculator = loadImage("calculator.png");
