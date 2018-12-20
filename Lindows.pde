@@ -226,15 +226,25 @@ void draw() {
     desktop();
   }
   if (starttwitter == true) {
+    frameRate(1);
     launch("H:/birdie.url");
     button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closetwitter");
     starttwitter = false;
+  
+   if(startedge == false){
+    frameRate(60);
+  }
   }
   if (startedge == true) { 
+    frameRate(1);
     launch("H:/edge.url");
     button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closeedge");
     startedge = false;
-  }
+  
+  if(startedge == false){
+    frameRate(60);
+  }  
+}
   if (startdagger == true) {
      playGame0 = true;
      gameDraw();
@@ -256,10 +266,14 @@ void draw() {
      desktop();
     }
     if (openpaint == true) {
-     launch("H:/Coding/Lindows/MSpant.url");
+      frameRate(1);
+     launch("H:/MSpant.url");
    openpaint = false;
+    
+    if(openpaint == false){
+         frameRate(60);
     }
-  
+    }
 
   if (closepaint == true) {
 
