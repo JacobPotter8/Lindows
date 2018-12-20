@@ -224,6 +224,8 @@ void draw() {
   if (closediscord == true) {
 
     desktop();
+    startdiscord = false;
+    closediscord = false;
   }
   if (starttwitter == true) {
     frameRate(1);
@@ -260,10 +262,14 @@ void draw() {
     if (closecalculator == true) {
       frameRate(60);
      desktop();
+     opencalculator = false;
+     closecalculator = false;
     }
     if (closedagger == true) {
      clear();
      desktop();
+     startdagger = false;
+     closedagger = false;
     }
     if (openpaint == true) {
       frameRate(1);
@@ -276,8 +282,10 @@ void draw() {
     }
 
   if (closepaint == true) {
-
     desktop();
+    openpaint = false;
+    closepaint = false;
+    
   }
   if (openprmcal == true) {
     fill(128, 240, 128);
@@ -291,8 +299,9 @@ void draw() {
   
 
   if (closeprmcal == true) {
-
     desktop();
+    openprmcal = false;
+    closeprmcal = false;
   }
 
     
