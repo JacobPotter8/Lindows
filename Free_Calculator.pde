@@ -6,7 +6,7 @@ void calculator(){
 void calculatoropen(){
   fill(123, 56, 150);
   rect(450, 50, 450, 165);
-     frameRate(25);
+     frameRate(15);
 
   noStroke();
   fill(255);
@@ -187,6 +187,7 @@ void clearcal() {
   }
 }
 void operation() {
+  textSize(38);
   if (add == true) {
     text("+", 570, 120);
   }
