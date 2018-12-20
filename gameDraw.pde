@@ -418,7 +418,7 @@ void gameDraw() {
     text("    stand in the portal for a total of 5 seconds.", 30, 210);
     text("- The portal will go unstable, your lives turn black as a warning.", 30, 240);
     text("- The unstable portal will consume a life if you are cought in it.", 30, 270);
-    text("Release to continue...", 30, 650);
+    text("Press Y to continue...", 30, 650);
 
 
     if (mousePressed == true) {

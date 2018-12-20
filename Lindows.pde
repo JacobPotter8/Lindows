@@ -3,6 +3,9 @@
 //Jacob is handing in the project
 //Make Chrome the default browser
 //DO NOT press enter in the calculator screen!!
+
+//Username : hee
+//Password heeman
 int playerX;
 int playerY;
 //int playGame;
@@ -234,7 +237,7 @@ void draw() {
   }
   if (starttwitter == true) {
     frameRate(1);
-    launch("H:/birdie.url");
+    launch("C:/birdie.url");
     button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closetwitter");
     starttwitter = false;
 
@@ -244,7 +247,7 @@ void draw() {
   }
   if (startedge == true) { 
     frameRate(1);
-    launch("H:/edge.url");
+    launch("C:/edge.url");
     button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closeedge");
     startedge = false;
 
@@ -278,7 +281,7 @@ void draw() {
   }
   if (openpaint == true) {
     frameRate(1);
-    launch("H:/MSpant.url");
+    launch("C:/MSpant.url");
     openpaint = false;
 
     if (openpaint == false) {
