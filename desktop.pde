@@ -23,18 +23,16 @@ button(#FFFFFF, 145, 45, 75, 75, 0, 0, "start game premiumcal");
 }
 
 void backgroundSwitcher(){
- framess =+1;
- if (framess >= 0){
+
+ if (second() >= 0){
   image(desk2,625,350);
  }
- if (framess <= 900){
+ if (second() <= 30){
    image(desk1,625,350);
 
  }
- if (framess == 1800){
-   framess = 1;
  }
- }
+ 
 
 void discord() {
   image(discord, 80, 80);

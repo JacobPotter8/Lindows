@@ -1,6 +1,8 @@
 //Matthew Richmond 
 //Jacob Potter
 //Jacob is handing in the project
+//Make Chrome the default browser
+//DO NOT press enter in the calculator screen!!
 int playerX;
 int playerY;
 //int playGame;
@@ -219,6 +221,7 @@ void draw() {
     clock();
     login = false;
   }
+  // Opening and Closing of Apps
   if (startdiscord == true) {
 
     image(discordImg, 625, 350);
@@ -263,10 +266,15 @@ void draw() {
   if (closecalculator == true) {
     frameRate(60);
     desktop();
+    closecalculator = false;
+    opencalculator = false;
+    
   }
   if (closedagger == true) {
     clear();
     desktop();
+    startdagger = false;
+    closedagger = false;
   }
   if (openpaint == true) {
     frameRate(1);
@@ -281,6 +289,7 @@ void draw() {
   if (closepaint == true) {
     clear();
     desktop();
+    openpaint = false;
     closepaint = false;
   }
   if (openprmcal == true) {
@@ -295,10 +304,12 @@ void draw() {
 
 
   if (closeprmcal == true) {
-
+closeprmcal = false;
+openprmcal = false;
     desktop();
   }
 }
+//Key Stuff
 void keyPressed() {
   gameKeys();
 
