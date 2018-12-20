@@ -1,8 +1,10 @@
 void desktop() {
   imageMode(CENTER);
-  background(desk1); 
-  fill(0);
-  rect( 1130, 670, 100, 45);
+  backgroundSwitcher();
+  imageMode(CENTER);
+ // fill(0);
+ // rect( 1130, 670, 100, 45);
+  
   button(#FFFFFF, 45, 45, 75, 75, 0, 0, "start game discord");
   button(#FFFFFF, 45, 145, 75, 75, 0, 0, "start game twitter");
   button(#FFFFFF, 45, 245, 75, 75, 0, 0, "start game edge");
@@ -20,7 +22,19 @@ button(#FFFFFF, 145, 45, 75, 75, 0, 0, "start game premiumcal");
   premiumcalculatoricon();
 }
 
+void backgroundSwitcher(){
+ framess =+1;
+ if (framess >= 0){
+  image(desk2,625,350);
+ }
+ if (framess <= 900){
+   image(desk1,625,350);
 
+ }
+ if (framess == 1800){
+   framess = 1;
+ }
+ }
 
 void discord() {
   image(discord, 80, 80);

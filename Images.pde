@@ -5,6 +5,7 @@ void Images() {
   discordImg = loadImage("discordimage.png");
   calculator = loadImage("calculator.png");
   desk1 = loadImage("desktop1.jpg");
+  desk2 = loadImage("desktop2.jpg");
   discord = loadImage("accord.png");
   twitter = loadImage("twitter.png");
   edge = loadImage("edge.png");

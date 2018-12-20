@@ -1,3 +1,6 @@
+//Matthew Richmond 
+//Jacob Potter
+//Jacob is handing in the project
 int playerX;
 int playerY;
 //int playGame;
@@ -87,7 +90,7 @@ PImage calculator;
 PImage paint;
 PImage cal;
 PImage premiumcalculator;
-
+PImage desk2;
 //Dagger variables
 int dagger1X;
 int dagger1Y;
@@ -108,6 +111,7 @@ int enterPassword = 0;
 //enterPassword: 0 turns it off. 1 Indicates the password is off but it does not switch back to enterUsername. 2 Indicates the password was correct.
 //Desktop variables
 PImage desk1;
+int framess;
 boolean startdiscord;
 boolean startup = true;
 boolean closediscord;
@@ -138,37 +142,37 @@ boolean operator = false;
 String operation;
 //Premium Calculator Variables
 /**
-float prmnum1;
-float prmnum2;
-float prmanswer;
-boolean prmadd = true;
-boolean prmsubtract = false;
-boolean prmmultiply = false;
-boolean prmdivide = false;
-boolean prmsquare = false;
-boolean prmsquareroot = false;
-boolean prmcube = false;
-//Scientific Notation
-boolean prmsn = false;
-boolean prmsin = false;
-boolean prmtan = false;
-boolean prmcos = false;
-boolean prmenter = false;
-boolean prmpower = false;
-boolean prmone = false;
-boolean prmtwo = false;
-boolean prmthree = false;
-boolean prmfour = false;
-boolean prmfive = false;
-boolean prmsix = false;
-boolean prmseven = false;
-boolean prmeight = false;
-boolean prmnine = false;
-boolean prmzero = false;
-boolean prmnegative = false;
-boolean prmoperation = false;
-boolean prmclearcal = false;
-*/
+ float prmnum1;
+ float prmnum2;
+ float prmanswer;
+ boolean prmadd = true;
+ boolean prmsubtract = false;
+ boolean prmmultiply = false;
+ boolean prmdivide = false;
+ boolean prmsquare = false;
+ boolean prmsquareroot = false;
+ boolean prmcube = false;
+ //Scientific Notation
+ boolean prmsn = false;
+ boolean prmsin = false;
+ boolean prmtan = false;
+ boolean prmcos = false;
+ boolean prmenter = false;
+ boolean prmpower = false;
+ boolean prmone = false;
+ boolean prmtwo = false;
+ boolean prmthree = false;
+ boolean prmfour = false;
+ boolean prmfive = false;
+ boolean prmsix = false;
+ boolean prmseven = false;
+ boolean prmeight = false;
+ boolean prmnine = false;
+ boolean prmzero = false;
+ boolean prmnegative = false;
+ boolean prmoperation = false;
+ boolean prmclearcal = false;
+ */
 
 void setup() {
   size(1250, 700);
@@ -181,7 +185,7 @@ void setup() {
   launchgamesetup = true;
   launchpaintsetup = true;
   Images();
-  }
+}
 
 
 
@@ -230,73 +234,71 @@ void draw() {
     launch("H:/birdie.url");
     button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closetwitter");
     starttwitter = false;
-  
-   if(startedge == false){
-    frameRate(60);
-  }
+
+    if (startedge == false) {
+      frameRate(60);
+    }
   }
   if (startedge == true) { 
     frameRate(1);
     launch("H:/edge.url");
     button(#FFFFFF, 1225, 0, 25, 25, 0, 0, "closeedge");
     startedge = false;
-  
-  if(startedge == false){
-    frameRate(60);
-  }  
-}
+
+    if (startedge == false) {
+      frameRate(60);
+    }
+  }
   if (startdagger == true) {
-     playGame0 = true;
-     gameDraw();
+    playGame0 = true;
+    gameDraw();
     if (launchgamesetup) {
       gameSetup();
     }
   }
-    if (opencalculator == true) {
-      calculatoropen(); 
-      button(#FFFFFF, 875, 50, 25, 25, 0, 0, "closecalculator");
-      
-   }
-    if (closecalculator == true) {
+  if (opencalculator == true) {
+    calculatoropen(); 
+    button(#FFFFFF, 875, 50, 25, 25, 0, 0, "closecalculator");
+  }
+  if (closecalculator == true) {
+    frameRate(60);
+    desktop();
+  }
+  if (closedagger == true) {
+    clear();
+    desktop();
+  }
+  if (openpaint == true) {
+    frameRate(1);
+    launch("H:/MSpant.url");
+    openpaint = false;
+
+    if (openpaint == false) {
       frameRate(60);
-     desktop();
     }
-    if (closedagger == true) {
-     clear();
-     desktop();
-    }
-    if (openpaint == true) {
-      frameRate(1);
-     launch("H:/MSpant.url");
-   openpaint = false;
-    
-    if(openpaint == false){
-         frameRate(60);
-    }
-    }
+  }
 
   if (closepaint == true) {
-
+    clear();
     desktop();
+    closepaint = false;
   }
   if (openprmcal == true) {
     fill(128, 240, 128);
-     rect(500, 200, 500, 300);
-     textSize(26);
-     fill(255, 20, 180);
-     text("Please pay $169.99 for this feature", 520, 250);
-     text("We cannot guarantee it is functional", 520, 320);
-     button(#FFFFFF, 973, 200,25, 25, 0, 0, "closepremiumcal");
-    }
-  
+    rect(500, 200, 500, 300);
+    textSize(26);
+    fill(255, 20, 180);
+    text("Please pay $169.99 for this feature", 520, 250);
+    text("We cannot guarantee it is functional", 520, 320);
+    button(#FFFFFF, 973, 200, 25, 25, 0, 0, "closepremiumcal");
+  }
+
 
   if (closeprmcal == true) {
 
     desktop();
   }
-
-    
-  }
+}
 void keyPressed() {
   gameKeys();
 
@@ -313,7 +315,7 @@ void keyPressed() {
       username = username + key;
     }
   }
-  
+
 
   if ( enterUsername == false) {
     if (keyCode == BACKSPACE) {
